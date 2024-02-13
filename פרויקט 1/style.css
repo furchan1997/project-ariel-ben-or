@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container-bac {
+    background: transparent linear-gradient(180deg, #281EFF 0%, #2DFF8C 100%) 0% 0% no-repeat padding-box;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font: normal normal normal 160px Satisfy;
+    color: #FFFFFF;
+
+    /* border: 1px solid #000; */
+}
+
+h2 {
+    font: normal normal normal 20px Varela Round;
+    color: #FFFFFF;
+}
+
+p {
+    font: normal normal normal 16px Varela Round;
+    color: #F9F9F9;
+}
+
+label {
+    font: normal normal normal 1rem/20px Varela Round;
+    color: #F9F9F9;
+    display: block;
+}
+
+input {
+    background: #F6F6F624 0% 0% no-repeat padding-box;
+    border: 2px solid #FFFFFF;
+    padding: 0.7rem;
+    width: 23rem;
+
+}
+
+input[type=submit] {
+    /* margin-top: 20px; */
+    width: 9em;
+    margin-right: 10px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    color: #1C1C1C;
+    font-size: 16px/18px;
+    font-family: Varela Round;
+    margin-top: 19px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+#container-form {
+    display: flex;
+    margin-top: 100px;
+    flex-wrap: wrap;
+}
+
+
+
+form {
+
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+
+
+
+}
+
+.form-control {
+    margin-right: 20px;
+}
+
+@media screen and (max-width:1200px) {
+
+
+    body {
+        max-height: 80vh;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    #container-bac {
+        width: 100vw;
+        /* height: 100vh; */
+        /* margin-bottom: 100px; */
+
+
+    }
+
+    #container {
+        width: 80vw;
+        text-align: center;
+
+    }
+
+
+
+    .form-control {
+
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+
+        margin: auto;
+        padding: 10px;
+    }
+
+    input,
+    label {
+
+        width: 80%;
+        margin: auto;
+    }
+
+
+
+
+
+
+    input[type=submit] {
+        width: 80%;
+        margin: auto;
+        font: normal normal normal 16px/13px Varela Round;
+        color: #2823FD;
+    }
+
+    h1 {
+        font-size: 370%;
+
+    }
+
+    h2 {
+        font-size: 110%;
+    }
+
+    p {
+        font-size: 100%;
+        margin-top: 2rem;
+    }
+
+
+
+}

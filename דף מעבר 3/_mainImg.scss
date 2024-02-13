@@ -1,0 +1,28 @@
+#main-img {
+    background-color: #EBFEFF;
+    min-height: 100vh;
+
+
+    img[alt=דף-נחיתה] {
+        width: 70vw;
+        height: 70vh;
+        margin: auto;
+        object-fit: contain;
+
+
+    }
+}
+
+@media screen and (max-width:1200px) {
+
+    #main-img {
+
+        min-height: 30vh;
+
+        img[alt=דף-נחיתה] {
+
+            height: 20vh;
+        }
+
+    }
+}

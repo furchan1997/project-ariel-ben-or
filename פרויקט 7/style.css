@@ -1,0 +1,263 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#border {
+
+    border: 7px solid #FDBD03;
+    margin-left: 70%;
+}
+
+#radius {
+    background-color: #FDBD03;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    margin-top: 45px;
+    margin-left: 70px;
+}
+
+img[src*=whatsapp] {
+
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    margin-left: 18px;
+}
+
+#continer-img {
+    margin-left: 100px;
+}
+
+img[src^=Image] {
+    width: 500px;
+    height: 700px;
+}
+
+h1 {
+    font: normal normal 900 4em/97px Heebo;
+    letter-spacing: 0px;
+    color: #FDBD03;
+}
+
+p {
+    font: normal normal normal 20px/29px Heebo;
+    letter-spacing: 0px;
+    color: #020253;
+    direction: rtl;
+    margin-bottom: 30px;
+
+}
+
+input {
+    width: 318px;
+    height: 50px;
+    background-color: #E5EEFF;
+    border: 1px solid #E5EEFF;
+    border-bottom: 4px solid #FDBD03;
+}
+
+input[type=submit] {
+
+    background-color: #FDBD03;
+    width: 150px;
+    font: normal normal bold 22px/30px Heebo;
+    letter-spacing: 0.33px;
+    color: #000000;
+    border: #FDBD03;
+    margin-top: 50px;
+}
+
+textarea {
+    width: 647px;
+    height: 143px;
+    background-color: #E5EEFF;
+    resize: none;
+    border: 1px solid #E5EEFF;
+    border-bottom: 4px solid #FDBD03;
+}
+
+label {
+    font: normal normal bold 16px/24px Heebo;
+    letter-spacing: 0px;
+    color: #2C2C2C;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#form-container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    direction: ltr;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#part-of-form-control {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    margin-bottom: 10px;
+}
+
+.inputAndLabel-control {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 10px;
+}
+
+footer {
+    display: flex;
+}
+
+img[alt$="icon"] {
+
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem;
+}
+
+img[alt*=facebook] {
+    width: 50%;
+    object-fit: fill;
+}
+
+.radus-icon-footer {
+    border-radius: 5rem;
+    background-color: #FDBD03;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 30px;
+    margin-left: 60px;
+}
+
+#border-b {
+    border-bottom: 10px solid #FDBD03;
+    margin-right: 45%;
+}
+
+@media screen and (max-width:1200px) {
+
+    body {
+        border-bottom: 10px solid #FDBD03;
+    }
+
+    #border {
+
+        border: 7px solid #FDBD03;
+        margin-left: 20vw;
+    }
+
+    #radius {
+        display: none;
+    }
+
+    img[src*=whatsapp] {
+        display: none;
+    }
+
+    #continer-img {
+
+        margin: auto;
+        margin-top: 100px;
+    }
+
+    img[src^=Image] {
+        width: 150px;
+        height: 170px;
+    }
+
+    #container {
+        width: 99vw;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    p {
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 280%;
+    }
+
+    #form-container {
+        width: 99vw;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    form {
+        width: 90vw;
+
+    }
+
+    input {
+        width: 90vw;
+    }
+
+    textarea {
+        width: 90vw;
+    }
+
+    input[type=submit] {
+        width: 90vw;
+        margin-bottom: 120px;
+    }
+
+    #part-of-form-control {
+        margin-top: 10px;
+    }
+
+    .inputAndLabel-control {
+        margin-top: 10px;
+    }
+
+    img[alt$="icon"] {
+
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .radus-icon-footer {
+        border-radius: 50%;
+        background-color: #FDBD03;
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+
+    footer {
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #border-b {
+        display: none;
+    }
+
+}

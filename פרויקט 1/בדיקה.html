@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@700&family=Satisfy&family=Sevillana&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@700&family=Satisfy&family=Sevillana&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #container-bac {
+            background: transparent linear-gradient(180deg, #281EFF 0%, #2DFF8C 100%) 0% 0% no-repeat padding-box;
+            width: 100vw;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font: normal normal normal 160px Satisfy;
+            color: #FFFFFF;
+            /* border: 1px solid #000; */
+        }
+
+        h2 {
+            font: normal normal normal 20px Varela Round;
+            color: #FFFFFF;
+        }
+
+        p {
+            font: normal normal normal 16px Varela Round;
+            color: #F9F9F9;
+        }
+
+        label {
+            font: normal normal normal 1rem/20px Varela Round;
+            color: #F9F9F9;
+            display: block;
+        }
+
+        input {
+            background: #F6F6F624 0% 0% no-repeat padding-box;
+            border: 2px solid #FFFFFF;
+            padding: 0.7rem;
+            width: 19rem;
+
+        }
+
+        input[type=submit] {
+            margin-top: 20px;
+            width: 9em;
+            color: #1C1C1C;
+            margin-right: 10px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            /* border: 1px solid #000; */
+
+        }
+
+        #container-form {
+            display: flex;
+            margin-top: 100px;
+        }
+
+
+
+        form {
+            display: flex;
+
+            justify-content: center;
+            /* margin-top: 20px; */
+            direction: rtl;
+            /* border: 1px solid #000; */
+
+
+        }
+
+        .form-control {
+            margin-right: 10px;
+        }
+
+        @media screen and (max-width:1200px) {
+
+            body {
+                max-height: 75vh;
+            }
+
+            #container-bac {
+                width: 99.9vw;
+
+                background: transparent linear-gradient(180deg, #281EFF 30%, #2DFF8C 70vh) 0% 0% no-repeat padding-box;
+                margin-bottom: 20%;
+
+
+
+
+            }
+
+            #container {
+                width: 80vw;
+                text-align: center;
+                /* height: 60vh; */
+                margin: auto;
+
+                /* border: 1px solid #000; */
+            }
+
+            #container-form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* width: 20vw; */
+                margin: 30px auto;
+            }
+
+            .form-control input {
+                width: 80vw;
+                /* width: 20rem; */
+            }
+
+            h1 {
+                font-size: 370%;
+                margin-top: 30%;
+                /* border: 1px solid #000; */
+                /* width: 90vw; */
+            }
+
+            h2 {
+                font-size: 110%;
+                /* margin-top: 2rem; */
+            }
+
+            p {
+                font-size: 100%;
+                margin-top: 2rem;
+            }
+
+            label {
+                font-size: 11px;
+
+            }
+
+            .form-control {
+                margin-top: 10px;
+            }
+
+            input[type=submit] {
+                width: 80vw;
+                /* border: 1px solid #000; */
+                margin-right: 0;
+                /* width: 15em; */
+                height: 50px;
+                font: normal normal normal 16px/13px Varela Round;
+                color: #2823FD;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container-bac">
+
+        <div id="container">
+            <h1>Here & Now</h1>
+            <h2>רצינו להזמין אתכם להנות משלל מתנות</h2>
+            <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לפרומי בלוף קינץ תתיח לרעח. לת צשחמי צש בליא, מנסוטו
+                צמלח
+                לביקו
+                ננבי, צמוקו בלוקריה.</p>
+        </div>
+
+
+        <form action="">
+            <div id="container-form">
+                <div class="form-control">
+                    <label for="שם">שם</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-control">
+                    <label for="דוא''ל">דוא''ל</label>
+                    <input type="email">
+                </div>
+                <div class="form-control">
+                    <input type="submit" value="עדכנו אותי">
+                </div>
+            </div>
+        </form>
+
+
+
+    </div>
+
+</body>
+
+</html>

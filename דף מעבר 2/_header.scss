@@ -1,0 +1,134 @@
+header {
+    background-color: #13E8F163;
+    margin-top: 50px;
+    width: 100vw;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* display: table-cell; */
+    direction: rtl;
+    text-align: center;
+    padding: 50px;
+    // border: 1px solid #000;
+
+    h2 {
+        font: normal normal 900 80px/118px Heebo;
+        color: $text-color;
+        letter-spacing: 0px;
+        margin: auto;
+
+    }
+
+    p {
+        text-align: center;
+        color: $text-color;
+        font: normal normal medium 20px/30px Heebo;
+        letter-spacing: 0px;
+        // margin: auto;
+    }
+
+
+
+
+}
+
+
+#a-control {
+
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 50vw;
+    // border: 1px solid #000;
+
+    // padding: 120px;
+
+
+
+    a[href$=html] {
+        background-color: $mainColor;
+        border-radius: 25px;
+        font: normal normal bold 1.5rem Heebo;
+        letter-spacing: 0.3px;
+        color: $text-color;
+        width: 50%;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+
+    }
+
+    #download {
+        background-color: $mainColor;
+        border-radius: 25px;
+        font: normal normal bold 1.5rem Heebo;
+        letter-spacing: 0.3px;
+        color: $text-color;
+        width: 50%;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        text-decoration: none;
+    }
+}
+
+#tools-logo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    // display: none;
+}
+
+@media screen and (max-width:1200px) {
+
+
+    header h2 {
+        font: normal normal 900 46px/67px Heebo;
+    }
+
+    #a-control {
+        width: 80vw;
+
+        a[href$=html] {
+            // display: none;
+            font-size: 80%;
+            width: 50%;
+        }
+
+        #download {
+            font-size: 80%;
+            width: 50%;
+        }
+    }
+
+    img[alt^=logo] {
+        width: 15vw;
+        height: auto;
+    }
+
+
+
+}
+
+@media screen and (max-width:300px) {
+
+    #a-control {
+
+        a[href$=html] {
+
+            font-size: 60%;
+        }
+
+        a[download=footer] {
+            font-size: 60%;
+        }
+    }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Heebo:wght@700&family=Sevillana&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+
+
+
+        img {
+            height: 68vh;
+            width: 100%;
+        }
+
+        .container-head {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 68vh;
+
+        }
+
+        h1 {
+            font-family: 'Assistant', sans-serif;
+            color: #D3E10E;
+            font-size: 5rem;
+        }
+
+        p {
+            color: #F9F9F9;
+            font: normal normal normal 1rem/26px Assistant;
+        }
+
+
+        form {
+            /* height: 20vh; */
+            display: flex;
+            /* width: 70%; */
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 0 auto;
+            direction: rtl;
+
+        }
+
+        input {
+            height: 3rem;
+            width: 21rem;
+            background-color: #F6F6F6;
+            border: 1px solid #F6F6F6;
+            border-bottom: 2px solid #D3E10E;
+        }
+
+        label {
+            display: block;
+            color: #011560;
+            font: normal normal bold 1rem/21px Assistant;
+        }
+
+        input[type=submit] {
+            margin-top: 1.5rem;
+            background-color: #D3E10E;
+            height: 3rem;
+            width: 7rem;
+            color: #011560;
+            font: normal normal bold 1rem/30px Assistant;
+        }
+
+        @media screen and (max-width:1200px) {
+
+            body {
+                width: 100vw;
+                height: 100vh;
+            }
+
+            img {
+                height: 40vh;
+            }
+
+            h1 {
+                font-size: 150%;
+            }
+
+            .container-head {
+                width: 100vw;
+                height: 30vh;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+
+
+
+
+
+            form {
+                display: flex;
+                flex-direction: column;
+                height: 59vh;
+                width: 30vw;
+
+
+
+            }
+
+            input[type=submit] {
+                margin-top: 1rem;
+                background-color: #D3E10E;
+                height: 3rem;
+                width: 21rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="container-img">
+
+        <img src="mainImg.png" alt="mainImg">
+
+        <div class="container-head">
+            <h1>תן לנו להוביל אותך קדימה</h1>
+            <p>לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש “ממלא מקום” בעת עריכ.</p>
+
+        </div>
+    </div>
+
+
+    <form action="">
+        <div class="form-control">
+            <label for="">שם מלא</label>
+            <input type="text">
+        </div>
+        <div class="form-control">
+            <label for="">דוא''ל' </label>
+            <input type="email">
+        </div>
+        <div class="form-control">
+            <input type="submit">
+        </div>
+    </form>
+
+
+
+</body>
+
+</html>
