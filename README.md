@@ -7,6 +7,8 @@
 [קורות חיים.docx](https://github.com/furchan1997/project-ariel-ben-or/files/14269495/default.docx)
 
 פרטים ליצירת קשר:
+
 טלפון: 0506595538
+
 אינסטגרם: ariel_ben_or
  
