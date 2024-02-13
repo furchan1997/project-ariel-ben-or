@@ -1,0 +1,358 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+#navbarNav {
+    direction: rtl;
+}
+
+#navbarNav ul li a {
+    font: normal normal normal 18px/37px Heebo;
+}
+
+img[alt=אני] {
+
+    border-radius: 100px;
+    height: 48px;
+}
+
+header {
+    background: #13E8F163 0% 0% no-repeat padding-box;
+    margin-top: 60px;
+    width: 100vw;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    direction: rtl;
+    text-align: center;
+}
+
+header h2 {
+    font: normal normal 900 5rem/118px Heebo;
+    color: #3A3A3A;
+    opacity: 1;
+}
+
+header p {
+    font: normal normal medium 2.5em/30px Heebo;
+    letter-spacing: 0px;
+    color: #3A3A3A;
+    font-size: 20px;
+    opacity: 1;
+    direction: ltr;
+}
+
+#tools-logo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    direction: ltr;
+}
+
+section p {
+    width: 70vw;
+}
+
+.dir {
+    direction: rtl;
+}
+
+img[alt=אני-שוב] {
+
+    width: 155px;
+    height: 150px;
+    border-radius: 145px;
+}
+
+a[href*=קורות] {
+    background-color: #1AE0EC;
+    border-radius: 25px;
+    font: normal normal bold 20px/30px Heebo;
+    letter-spacing: 0.3px;
+    color: #3A3A3A;
+    width: 260px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#bgc-card {
+    background-color: #F6F6F6;
+    width: 100%;
+}
+
+#container-card {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 70vw;
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    width: 260px;
+    height: 300px;
+    box-shadow: 15px 15px 15px gainsboro;
+    text-align: center;
+
+}
+
+img[alt=Screenshot] {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: fill;
+    background-repeat: no-repeat;
+}
+
+img[alt$=logo] {
+    width: 80px;
+    height: 80px;
+}
+
+a[href*=מעבר] {
+    text-align: right;
+    font: normal normal medium 1rem/26px Heebo;
+    letter-spacing: 0px;
+    background-color: #1AE0EC;
+    border-radius: 25px;
+    width: 70%;
+    height: 2rem;
+    margin: auto;
+    color: #3A3A3A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+#bgc-card h1,
+p {
+    text-align: center;
+    width: 100%;
+}
+
+.card h3,
+p {
+    margin-top: 3rem;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img[alt*=דואר] {
+
+    width: 400px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #3A3A3A;
+}
+
+#form-title {
+    padding: 50px;
+}
+
+form {
+    direction: rtl;
+}
+
+#form-title h1 {
+
+    text-align: right;
+    font: normal normal 900 36px/53px Heebo;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    text-align: right;
+}
+
+#form-title p {
+    text-align: justify;
+    direction: rtl;
+    font: normal normal normal 20px/29px Heebo;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.form-label {
+    text-align: right;
+    font: normal normal bold 16px/24px Heebo;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+form textarea {
+    height: 57px;
+    resize: none;
+}
+
+button[type=submit] {
+    width: 10rem;
+    height: 3rem;
+    background: #1AE0EC 0% 0% no-repeat padding-box;
+    border-radius: 25px;
+    text-align: right;
+    font: normal normal bold 22px/30px Heebo;
+    letter-spacing: 0.33px;
+    color: #2C2C2C;
+    text-align: center;
+}
+
+.icons-footer {
+    min-height: 50vh;
+    background-color: #1AE0EC;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.title-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+img[alt *=ic] {
+    width: 2rem;
+    height: 2.5rem;
+}
+
+#last-item {
+    max-height: 40px;
+    background: #000000 0% 0% no-repeat padding-box;
+    border-bottom: 10px solid #1AE0EC;
+    display: flex;
+    justify-content: space-between;
+}
+
+#last-item h2 {
+    font: normal normal normal 20px/29px Heebo;
+    letter-spacing: 0.5px;
+    color: #1AE0EC;
+    margin-left: 2rem;
+}
+
+
+
+@media screen and (max-width:1200px) {
+
+    header h1 {
+        font-size: 340%;
+        width: 100vw;
+    }
+
+    header p {
+        font-size: 100%;
+        margin-bottom: 30px;
+    }
+
+    img[alt="אני-שוב"] {
+        margin-top: 3rem;
+    }
+
+    section h1 {
+        margin-top: 20px;
+    }
+
+    section p {
+        margin-top: 20px;
+    }
+
+    section a {
+        margin-top: 20px;
+    }
+
+    #bgc-card {
+        background-color: #F6F6F6;
+        width: 100%;
+    }
+
+    .card {
+        margin-top: 1rem;
+    }
+
+    img[alt="תמונה של דואר ליצירת קשר"] {
+        width: 185px;
+        height: 161px;
+    }
+
+    #icons-footer {
+        min-height: 50vh;
+        width: 100vw;
+    }
+
+    .title-control {
+        width: 50%;
+    }
+
+    button[type=submit] {
+        width: 50%;
+        height: 30%;
+    }
+
+    #small-screen-solution {
+
+        font-size: 1rem;
+    }
+
+    a[href*=index2] {
+
+        width: 70vw;
+    }
+}
+
+@media screen and (max-width:300px) {
+
+    #small-screen-solution {
+        font-size: 80%;
+    }
+
+    a[href*=מעבר] {
+        font-size: 80%;
+        width: 40vw;
+        height: 3rem;
+    }
+
+    header h1 {
+        font-size: 200%;
+    }
+
+}
