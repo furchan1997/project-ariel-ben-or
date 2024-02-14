@@ -107,7 +107,7 @@ a[href*=קורות]:hover {
     display: flex;
     justify-content: center;
     align-content: center;
-    width: 70vw;
+    width: 60vw;
     margin: auto;
     flex-wrap: wrap;
     gap: 1em;
