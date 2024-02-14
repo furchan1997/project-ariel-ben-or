@@ -63,6 +63,12 @@ header {
 
     }
 
+    a[href$=html]:hover {
+        background-color: darkblue;
+        color: #1AE0EC;
+        text-decoration: none;
+    }
+
     #download {
         background-color: $mainColor;
         border-radius: 25px;
@@ -75,6 +81,12 @@ header {
         align-items: center;
         justify-content: center;
         margin-right: 1rem;
+        text-decoration: none;
+    }
+
+    #download:hover {
+        background-color: darkblue;
+        color: #1AE0EC;
         text-decoration: none;
     }
 }

@@ -35,7 +35,7 @@ img[src*=whatsapp] {
     margin-left: 100px;
 }
 
-img[src^=Image] {
+img[alt^=תמונה] {
     width: 500px;
     height: 700px;
 }
@@ -180,7 +180,7 @@ img[alt*=facebook] {
         margin-top: 100px;
     }
 
-    img[src^=Image] {
+    img[alt^=תמונה] {
         width: 150px;
         height: 170px;
     }

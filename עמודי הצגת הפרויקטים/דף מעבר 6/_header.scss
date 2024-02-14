@@ -6,11 +6,9 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* display: table-cell; */
     direction: rtl;
     text-align: center;
     padding: 50px;
-    // border: 1px solid #000;
 
     h2 {
         font: normal normal 900 80px/118px Heebo;
@@ -25,7 +23,6 @@ header {
         color: $text-color;
         font: normal normal medium 20px/30px Heebo;
         letter-spacing: 0px;
-        // margin: auto;
     }
 
 
@@ -37,13 +34,10 @@ header {
 #a-control {
 
     display: flex;
-    // align-items: center;
     justify-content: center;
     margin: auto;
     width: 50vw;
-    // border: 1px solid #000;
 
-    // padding: 120px;
 
 
 
@@ -77,6 +71,18 @@ header {
         margin-right: 1rem;
         text-decoration: none;
     }
+
+    a[href$=html]:hover {
+        background-color: darkblue;
+        color: #1AE0EC;
+        text-decoration: none;
+    }
+
+    #download:hover {
+        background-color: darkblue;
+        color: #1AE0EC;
+        text-decoration: none;
+    }
 }
 
 #tools-logo {
@@ -84,7 +90,6 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     margin: auto;
-    // display: none;
 }
 
 @media screen and (max-width:1200px) {
@@ -98,7 +103,6 @@ header {
         width: 80vw;
 
         a[href$=html] {
-            // display: none;
             font-size: 80%;
             width: 50%;
         }

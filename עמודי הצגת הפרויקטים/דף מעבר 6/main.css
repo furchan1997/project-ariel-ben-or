@@ -36,7 +36,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* display: table-cell; */
   direction: rtl;
   text-align: center;
   padding: 50px;
@@ -85,6 +84,16 @@ header p {
   align-items: center;
   justify-content: center;
   margin-right: 1rem;
+  text-decoration: none;
+}
+#a-control a[href$=html]:hover {
+  background-color: darkblue;
+  color: #1AE0EC;
+  text-decoration: none;
+}
+#a-control #download:hover {
+  background-color: darkblue;
+  color: #1AE0EC;
   text-decoration: none;
 }
 

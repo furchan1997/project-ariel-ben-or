@@ -90,6 +90,14 @@ a[href*=קורות] {
 
 }
 
+a[href*=קורות]:hover {
+
+    background-color: darkblue;
+    color: #1AE0EC;
+    text-decoration: none;
+}
+
+
 #bgc-card {
     background-color: #F6F6F6;
     width: 100%;
@@ -150,6 +158,12 @@ a[href*=מעבר] {
     align-items: center;
     justify-content: center;
     margin-bottom: 3rem;
+}
+
+a[href*=מעבר]:hover {
+    color: #1AE0EC;
+    background-color: darkblue;
+    text-decoration: none;
 }
 
 #bgc-card h1,

@@ -73,6 +73,11 @@ header p {
   justify-content: center;
   text-decoration: none;
 }
+#a-control a[href$=html]:hover {
+  background-color: darkblue;
+  color: #1AE0EC;
+  text-decoration: none;
+}
 #a-control #download {
   background-color: #1AE0EC;
   border-radius: 25px;
@@ -85,6 +90,11 @@ header p {
   align-items: center;
   justify-content: center;
   margin-right: 1rem;
+  text-decoration: none;
+}
+#a-control #download:hover {
+  background-color: darkblue;
+  color: #1AE0EC;
   text-decoration: none;
 }
 
