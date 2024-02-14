@@ -36,7 +36,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* display: table-cell; */
   direction: rtl;
   text-align: center;
   padding: 50px;
