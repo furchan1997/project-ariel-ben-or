@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style8.css">
+    <script src="../script/script.js" defer></script>
+    <title>Snake</title>
+</head>
+
+<body onload="createBoard()">
+    <h1>סניק- פרויקט מספר 1 של אריאל בן אור</h1>
+    <!-- Add this HTML somewhere in your page -->
+
+    <select id="difficulty">
+        <option value="easy">קל</option>
+        <option value="medium">בינוני</option>
+        <option value="hard">קשה</option>
+    </select>
+
+    <div id="board"></div>
+    <p><b>ניקוד: </b> <span id="score">0</span></p>
+    <!-- <audio src="Country_Blues.ogg" controls autoplay></audio>
+    <audio src="snake_Pebble.ogg"></audio> -->
+
+    <button id="newGame" onclick="newGame()">newGame</button>
+    <span id="msg"></span>
+    <span id="record"></span>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600;700;900&display=swap');
+
+html {
+    min-height: 100%;
+}
+
+body {
+    direction: rtl;
+    background-color: #383838;
+    padding-bottom: 200px;
+    text-align: center;
+}
+
+* {
+    font-family: 'Rubik', sans-serif !important;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin: 16px;
+}
+
+#board {
+    background-color: #ffffff00;
+    margin: auto;
+    border-radius: 6px;
+    text-align: center;
+    display: inline-grid;
+    color: white;
+    border: 4px solid black;
+    background-color: #464646;
+}
+
+#board>div {
+    height: 10px;
+    width: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6px;
+}
+
+.snake {
+    background-color: chartreuse;
+    border-radius: 50%;
+}
+
+.snake.head {
+    background-color: chocolate;
+}
+
+.apple::after {
+    content: "🍎";
+    font-size: 11px;
+}
+
+#score {
+    font-size: 24px;
+    color: white;
+}
+
+#newGame {
+    display: none;
+}
+
+#msg {
+    font-size: 30px;
+    color: plum;
+    display: none;
+}
+
+#difficulty {
+    display: block;
+}
