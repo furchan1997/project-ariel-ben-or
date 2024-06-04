@@ -1,6 +1,6 @@
 const board = document.querySelector("#board");
 const arryImges = ['אננס.jpg', 'בצל.jpg', 'חסה.jpg', 'מלפפון.jpg', 'מנגו.jpg', 'עגבניה.jpg', 'פלפל אדום מתוק.jpg', 'פלפל ירוק חריף.jpg', 'צנון.jpg', 'שום.jpg', 'אננס.jpg', 'בצל.jpg', 'חסה.jpg', 'מלפפון.jpg', 'מנגו.jpg', 'עגבניה.jpg', 'פלפל אדום מתוק.jpg', 'פלפל ירוק חריף.jpg', 'צנון.jpg', 'שום.jpg'];
-const width = window.screen.width < 640 ? 90 : 100;
+const width = window.screen.width < 640 ? 97 : 100;
 const height = 100;
 const hiddenSrc = 'defulet card.png';
 let firstCard, secondCard;
