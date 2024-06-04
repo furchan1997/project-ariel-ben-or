@@ -1,6 +1,6 @@
 const board = document.querySelector("#board");
 const arryImges = ['אננס.jpg', 'בצל.jpg', 'חסה.jpg', 'מלפפון.jpg', 'מנגו.jpg', 'עגבניה.jpg', 'פלפל אדום מתוק.jpg', 'פלפל ירוק חריף.jpg', 'צנון.jpg', 'שום.jpg', 'אננס.jpg', 'בצל.jpg', 'חסה.jpg', 'מלפפון.jpg', 'מנגו.jpg', 'עגבניה.jpg', 'פלפל אדום מתוק.jpg', 'פלפל ירוק חריף.jpg', 'צנון.jpg', 'שום.jpg'];
-const width = window.screen.width < 640 ? 70 : 100;
+const width = window.screen.width < 640 ? 90 : 100;
 const height = 100;
 const hiddenSrc = 'defulet card.png';
 let firstCard, secondCard;
@@ -19,7 +19,6 @@ function updateBoard() {
         photo.style.height = height + "px";
         photo.classList.add("dizing");
         photo.src = hiddenSrc;
-        arryImges.sort(() => Math.random() - 0.5);
 
         checkRes(`ברוכים הבאים למשחק הזכרון <br /> החוקים הם פשוטים: בלחיצה חד פעמית על כפתור הצג קלפים יהיו לכם כ-10 שניות להתסכל על מיקומי הקלפים, אחריי 10 שניות הקלפים יוסתרו ועליכם להתאים לכל קלף את הקלף הזהה לו <br /> שימו לב: אם מגיעים ל5 פסילות המשחק נגמר, בהצלחה ! <br`, counter, "green", "yellow")
 

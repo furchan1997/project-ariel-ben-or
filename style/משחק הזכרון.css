@@ -105,7 +105,7 @@ button {
     }
 
     #board {
-        width: 90vw;
+        width: 100%;
         text-align: center;
         /* margin: 0 auto; */
     }
