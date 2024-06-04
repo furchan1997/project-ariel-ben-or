@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../script/משחק הזכרון.js" defer></script>
+    <link rel="stylesheet" href="../style/משחק הזכרון.css">
+    <title>משחק הזיכרון</title>
+</head>
+
+<body onload="updateBoard()">
+    <h1>משחק הזכרון</h1>
+
+    <button onclick="newGame()"> !משחק חדש </button>
+    <button id="showCards">הצג קלפים</button>
+    <button id="clearRecord">אפס שיא</button>
+    <br>
+    <span id="res"></span>
+    <div class="styleAftterWon"></div>
+
+    <div id="board"></div>
+
+    <span id="record" class="recordStyle"></span>
+</body>
+
+</html>

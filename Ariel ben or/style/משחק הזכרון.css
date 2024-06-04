@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600;700;900&display=swap');
+
+body {
+    direction: rtl;
+    font-family: 'Rubik', sans-serif;
+    background-color: #bfc2de;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+.hide {
+    background-color: rgba(175, 44, 44, 0.799);
+    width: 100px;
+    /* flex-direction: column; */
+    height: 100px;
+}
+
+#board {
+    width: 50%;
+    margin: 0 auto;
+}
+
+button {
+    /* width: 50%; */
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #a41f1f;
+}
+
+.dizing {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+        0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.dizing:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3),
+        0 20px 40px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+#res {
+    padding: 10px;
+    width: 60%;
+    border-radius: 60px;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+}
+
+.recordStyle {
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+
+.styleAftterWon {
+    margin: auto;
+    display: block;
+    background-color: #080c35;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1200px) {
+
+
+    button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        margin: 5px 0;
+        outline: none;
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+        background-color: #a41f1f;
+    }
+
+    #board {
+        width: 90vw;
+        text-align: center;
+        /* margin: 0 auto; */
+    }
+
+    #res {
+        padding: 10px;
+        width: 80%;
+        border-radius: 60px;
+        margin: 0 auto;
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        display: block;
+    }
+}
