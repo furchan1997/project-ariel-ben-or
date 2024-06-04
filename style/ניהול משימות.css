@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600;700;900&display=swap');
+
+:root {
+    --bg: #8b00c7;
+}
+
+body {
+    direction: rtl;
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--bg);
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.frame {
+    width: 80%;
+    max-width: 900px;
+    min-height: 300px;
+    background-color: white;
+    margin: auto;
+    border-radius: 6px;
+    padding: 16px;
+    box-shadow: 0 0 4px #00000059;
+    padding-bottom: 100px;
+}
+
+.task {
+    border-bottom: 1px solid #c1c1c1;
+    padding-bottom: 12px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: normal;
+    padding: 12px 0;
+    margin: 0px;
+}
+
+button {
+    background-color: var(--bg);
+    ;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    margin: 6px;
+}
+
+button:hover {
+    filter: brightness(1.2);
+}
+
+input,
+select {
+    border: 1px solid;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+
+ul,
+ol {
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    border-bottom: 1px solid #cccccc;
+    display: flex;
+}
+
+li:first-child {
+    border-top: 1px solid #cccccc;
+}
+
+li>div {
+    padding: 12px 8px;
+    width: 100%;
+    outline: 0;
+}
+
+#delete {
+    display: none;
+}
+
+.lists {
+
+    width: 50%;
+    margin: auto;
+    border: 1px solid #000;
+    box-shadow: #804b94 10px 10px 10px;
+    padding: 12px 8px;
+    outline: 0;
+    text-align: center;
+}
+
+#delete-all {
+    display: none;
+}
+
+.msg-click {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}

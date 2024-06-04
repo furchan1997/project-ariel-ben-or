@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../script/ניהול משימות.js" defer></script>
+    <link rel="stylesheet" href="../style/ניהול משימות.css">
+    <title>ניהול משימות </title>
+</head>
+
+<body onload="init()">
+    <h1>ניהול משימות</h1>
+
+    <div class="frame">
+        <button id="delete-all">מחק הכל</button>
+
+        <ul class="tasks">
+
+        </ul>
+
+        <input type="text" onkeyup="keyup(event)">
+        <button onclick="add()">הוסף</button>
+        <button id="save">שמור ברשימה</button>
+        <button id="delete">מחק רשימה</button>
+        <div class="lists"></div>
+    </div>
+
+</body>
+
+</html>

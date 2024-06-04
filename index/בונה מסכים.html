@@ -6,24 +6,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../script/בונה מסכים.js" defer></script>
     <link rel="stylesheet" href="../style/בונה מסכים.css">
-    <title>ניהול משימות </title>
+    <title>בונה מסכים </title>
 </head>
 
-<body onload="init()">
-    <h1>ניהול משימות</h1>
+<body>
 
-    <div class="frame">
-        <button id="delete-all">מחק הכל</button>
+    <button onclick="showOrHide()">הצג/הסתר</button>
 
-        <ul class="tasks">
+    <div id="frame">
 
-        </ul>
 
-        <input type="text" onkeyup="keyup(event)">
-        <button onclick="add()">הוסף</button>
-        <button id="save">שמור ברשימה</button>
-        <button id="delete">מחק רשימה</button>
-        <div class="lists"></div>
+        <div id="panelSide">
+            <h1>בונה מסכים</h1>
+            <nav>
+                <a class="active" onclick="pageToShow('setting', this)"> עיצוב כללי</a>
+                <a onclick="pageToShow('elements', this)"> אלמנטים</a>
+            </nav>
+            <!-- עיצוב כללי -->
+            <div id="setting">
+
+                <h2>רקע לאתר</h2>
+                <input type="color" oninput="bgPage(this)">
+
+                <h2>גודל טקסט</h2>
+                <input type="range" min="10" max="50" value="16" oninput="fontSize(this)">
+
+                <h2>ריווח פנימי של הדף</h2>
+                <input type="range" min="10" max="70" value="16" oninput="padding(this)">
+
+                <h2>סוגי גופנים</h2>
+                <select onchange="fontFamily(this)">
+                    <option value="Arial">Arial</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+                <h2>צבע טקסט</h2>
+                <input type="color" oninput="fontColor(this)">
+            </div>
+            <!-- אלמנטים למסך -->
+            <div id="elements">
+                <div class="field">
+                    <label>בחר אלמנט</label>
+                    <select id="Subjects" oninput="typeSelect(this)">
+                        <option></option>
+                        <option value="title">כותרת</option>
+                        <option value="input">תיבת קלט</option>
+                        <option value="button">לחצנים</option>
+                        <option value="media">מדיה</option>
+                        <option value="styleContent">עימוד התוכן</option>
+                    </select>
+                </div>
+                <div id="params">
+                    <div id="headerType" class="field">
+                        <label>בחר כותרת</label>
+                        <select>
+                            <option value="h1">h1</option>
+                            <option value="h2">h2</option>
+                            <option value="h3">h3</option>
+                            <option value="h4">h4</option>
+                            <option value="h5">h5</option>
+                        </select>
+                    </div>
+                    <div id="inputType" class="field">
+                        <label>סוג קלט</label>
+                        <select>
+                            <option value="text">טקסט</option>
+                            <option value="number">מספר</option>
+                            <option value="date">תאריך</option>
+                            <option value="time">שעה</option>
+                        </select>
+                    </div>
+
+                    <div id="mediaType" class="field">
+                        <label>סוג מדיה</label>
+                        <select id="mediaTypeSelect">
+                            <option value="img">תמונה</option>
+                        </select>
+
+                    </div>
+                    <div id="mediaSource" class="field">
+                        <label>מקור מדיה</label>
+                        <input type="url" id="mediaSourceInput" placeholder="הכנס URL או בחר קובץ">
+                    </div>
+
+                    <div id="mediaWidth" class="field">
+                        <label>רוחב מדיה</label>
+                        <input type="number" id="mediaWidthInput" placeholder="רוחב בפיקסלים">
+                    </div>
+
+                    <div id="mediaHeight" class="field">
+                        <label>גובה מדיה</label>
+                        <input type="number" id="mediaHeightInput" placeholder="גובה בפיקסלים">
+                    </div>
+
+                    <div id="mediaCaption" class="field">
+                        <label>כיתוב מדיה</label>
+                        <input type="text" id="mediaCaptionInput" placeholder="כיתוב">
+                    </div>
+
+                    <div id="heightElem">
+                        <label>גובה אלמנט</label>
+                        <input type="number">
+                    </div>
+
+                    <div id="widthElem">
+                        <label>רוחב אלמנט</label>
+                        <input type="number">
+                    </div>
+
+                    <div id="bcElem" class="field">
+                        <label> צבע האלמנט</label>
+                        <input type="color">
+                    </div>
+
+                    <div id="fontSize" class="field">
+                        <label>גודל הטקסט</label>
+                        <input type="number">
+                    </div>
+
+                    <div id="color" class="field">
+                        <label>צבע טקסט</label>
+                        <input type="color">
+                    </div>
+
+                    <div id="Btncenter" class="field">
+                        <button onclick="centerIt()">מרכז תוכן</button>
+                        <button onclick="rightIt()">הזז תוכן לצד ימין</button>
+                        <button onclick="leftIt()">הזז תוכן לצד שמאל</button>
+                        <button onclick="topIt()">הזז תוכן למעלה</button>
+                        <button onclick="bottomIt()">הזז תוכן למטה</button>
+                        <button onclick="rowsIt()">הפוך תוכן</button>
+                    </div>
+
+                    <div id="content" class="field">
+                        <label>תוכן</label>
+                        <input type="text">
+                    </div>
+
+                </div>
+                <button onclick="add()">הוסף</button>
+                <button onclick="save()"> שמור</button>
+                <button onclick="newPage()"> חדש</button>
+
+            </div>
+        </div>
+
+        <!-- הדף שעליו יוצגו העיצוב והאלמנטים -->
+        <div id="page" contenteditable="true">
+
+        </div>
+
     </div>
 
 </body>
