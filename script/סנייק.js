@@ -23,6 +23,7 @@ function createBoard() {
         divs.push(div);
     }
 
+    recordRes.innerHTML = `השיא שלך הינו: ${record} נקודות`
 
     color();
     setApple();

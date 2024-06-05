@@ -18,10 +18,11 @@ body {
 }
 
 #panelSide {
-    background-image: linear-gradient(237deg, #5ccc24, #328d7c);
+    background: linear-gradient(to right, #4facfe, #00f2fe);
     overflow-y: auto;
-    /* position: fixed; */
+    width: 300px;
     height: 100vh;
+    border-radius: 10px;
 
 }
 
@@ -49,7 +50,8 @@ nav {
 }
 
 nav a {
-    background: rgb(81, 142, 254);
+    background-color: #0052cc;
+    color: white;
     padding: 8px;
     display: block;
     width: 100%;
@@ -59,12 +61,13 @@ nav a {
 }
 
 nav a:hover {
-    background: rgb(50, 255, 50);
+    background: #4facfe;
 }
 
 h2 {
     text-align: center;
     margin-top: 20px;
+    color: rgb(0, 25, 152);
 }
 
 
@@ -80,7 +83,55 @@ h2 {
 }
 
 .active {
-    background: rgb(50, 255, 50);
+    background-color: #00f2fe;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(0, 25, 152);
+    background: #4facfe;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(0, 25, 152);
+    background: #4facfe;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(0, 25, 152);
+    background: #4facfe;
+}
+
+button:hover {
+    filter: brightness(1.2);
+    cursor: pointer;
+}
+
+#show-Or-Hide-Panel {
+    width: 100px;
 }
 
 #elements {
@@ -96,8 +147,15 @@ h2 {
 }
 
 
-/* @media screen and (max-width:1200px) {
+@media screen and (max-width:1200px) {
     #panelSide {
         width: 100%;
     }
-} */
+
+    #setting>* {
+        /* display: none; */
+        /* padding-top: 10px; */
+        /* font-size: 20px; */
+        height: 50px;
+    }
+}

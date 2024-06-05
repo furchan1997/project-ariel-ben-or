@@ -10,10 +10,6 @@ const elementSelected = {
     styleContent: ['Btncenter']
 };
 
-if (window.screen.width < 640) {
-    panelSide.style.position = "fixed";
-}
-
 function bgPage(elem) {
     page.style.backgroundColor = elem.value;
     save();
@@ -181,7 +177,7 @@ function save() {
             });
             elements.push(element);
         }
-        // window.screen.width < 640 ? panelSide.style.display = 'none' : panelSide.style.display = 'block';
+        window.screen.width < 640 ? panelSide.style.display = 'none' : panelSide.style.display = 'block';
 
     });
 

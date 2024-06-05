@@ -11,15 +11,18 @@
 </head>
 
 <body onload="createBoard()">
-    <h1>סניק- פרויקט מספר 1 של אריאל בן אור</h1>
-    <!-- Add this HTML somewhere in your page -->
-
-    <select id="difficulty">
-        <option value="easy">קל</option>
-        <option value="medium">בינוני</option>
-        <option value="hard">קשה</option>
-    </select>
-
+    <div id="container-title">
+        <h1>סניק</h1>
+        <div id="select-aria">
+            <!-- Add this HTML somewhere in your page -->
+            <h2>בחר רמת קושי</h2>
+            <select id="difficulty">
+                <option value="easy">קל (10 נקודות) </option>
+                <option value="medium">בינוני (20 נקודות)</option>
+                <option value="hard">קשה (30 נקודות)</option>
+            </select>
+        </div>
+    </div>
     <div id="board"></div>
     <p><b>ניקוד: </b> <span id="score">0</span></p>
     <!-- <audio src="Country_Blues.ogg" controls autoplay></audio>
