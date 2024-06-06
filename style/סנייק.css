@@ -104,3 +104,26 @@ h2 {
 #difficulty:hover {
     background-color: #84c0c4;
 }
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+.arrow.up {
+    border-bottom: 50px solid black;
+}
+
+.arrow.down {
+    border-top: 50px solid black;
+}
+
+.arrow.left {
+    border-right: 50px solid black;
+}
+
+.arrow.right {
+    border-left: 50px solid black;
+}

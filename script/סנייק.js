@@ -213,21 +213,31 @@ window.addEventListener('keydown', ev => {
         case "Escape": clearInterval(myInterval); break;
         case "Enter": newGame(); break;
     }
-    window.addEventListener('touchstart', ev => {
-        ev.preventDefault();
-        const x = ev.changedTouches[0].clientX;
-        const y = ev.changedTouches[0].clientY;
-        if (x < width / 2) {
-            move('left');
-        } else {
-            move('right');
-        }
-        if (y < height / 2) {
-            move('up');
-        } else {
-            move('down');
-        }
-    });
 });
 
+board.addEventListener('touchstart', handleTouchStart, false);
+
+function handleTouchStart(event) {
+    const touchX = event.touches[0].clientX;
+    const touchY = event.touches[0].clientY;
+    const headX = divs[snake[0]].getBoundingClientRect().left;
+    const headY = divs[snake[0]].getBoundingClientRect().top;
+
+    const deltaX = touchX - headX;
+    const deltaY = touchY - headY;
+
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        if (deltaX > 0) {
+            move('right');
+        } else {
+            move('left');
+        }
+    } else {
+        if (deltaY > 0) {
+            move('down');
+        } else {
+            move('up');
+        }
+    }
+}
 
