@@ -214,3 +214,19 @@ window.addEventListener('keydown', ev => {
         case "Enter": newGame(); break;
     }
 });
+
+window.addEventListener('touchstart', ev => {
+    ev.preventDefault();
+    const x = ev.changedTouches[0].clientX;
+    const y = ev.changedTouches[0].clientY;
+    if (x < width / 2) {
+        move('left');
+    } else {
+        move('right');
+    }
+    if (y < height / 2) {
+        move('up');
+    } else {
+        move('down');
+    }
+});
