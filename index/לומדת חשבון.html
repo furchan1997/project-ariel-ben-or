@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>לומדת חשבון</title>
+    <link rel="stylesheet" href="../style/לומדת חשבון.css">
+    <script src="../script/לומדת חשבון.js" defer></script>
+</head>
+
+<body>
+
+    <h1>משחק ללימודי חשבון</h1>
+    <nav id="nav-bar">
+
+        <h2>אפשריות משחק</h2>
+        <select name="" id="difficulty">
+            <option>בחר דרגת קושי</option>
+            <option value="easy">1-10</option>
+            <option value="medium">1-100</option>
+            <option value="hard">1-1000</option>
+        </select>
+        <select name="" id="operators">
+
+            <option value="+">חיבור</option>
+            <option value="-">חיסור</option>
+            <option value="*">כפל</option>
+            <option value="/">חילוק</option>
+        </select>
+
+    </nav>
+    <div id="mission-area">
+        <p id="targil"></p>
+        <input id="answer">
+        <button id="checkRes">בדוק</button>
+        <button id="nextEx">תרגיל הבא</button>
+        <button id="DeleteLocal">מחק טבלה </button>
+        <p id="res"></p>
+    </div>
+
+    <table id="table">
+        <thead>
+            <td>תרגיל</td>
+            <td>תשובה נכונה</td>
+            <td>תשובה שגויה</td>
+            <td>נקודות</td>
+        <tbody>
+
+        </tbody>
+        </thead>
+    </table>
+</body>
+
+</html>

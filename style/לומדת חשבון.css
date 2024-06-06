@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: cornsilk;
+    /* AliceBlue */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #ff6347;
+    /* Tomato */
+    /* margin-top: 50px; */
+}
+
+h2 {
+    color: #31120d;
+}
+
+#nav-bar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+select {
+    padding: 10px;
+    font-size: 1em;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #ff6347;
+    color: wheat;
+}
+
+select:focus {
+    outline: none;
+    border-color: #ff6347;
+    /* Tomato */
+}
+
+#difficulty {
+    margin-right: 20px;
+}
+
+#mission-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px;
+    /* padding-left: 10px; */
+
+}
+
+#mission-area>* {
+    margin: 5px;
+}
+
+button {
+    padding: 10px;
+    font-size: 1em;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #ff6347;
+    color: wheat;
+}
+
+button:hover {
+    background-color: #f0f8ff;
+    cursor: pointer;
+    color: #ff6347;
+}
+
+#res {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    direction: rtl;
+    background-color: cornsilk;
+    margin: auto;
+
+    /* border: 1px solid #000; */
+
+}
+
+thead {
+    font-size: 18px;
+    color: #ff6347;
+    font-weight: bold;
+    text-align: center;
+}
+
+th,
+td {
+    text-align: center;
+    border: 1px solid #cd9c9c;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+tbody tr td {
+    direction: ltr;
+}
