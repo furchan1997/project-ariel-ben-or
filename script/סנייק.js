@@ -215,29 +215,22 @@ window.addEventListener('keydown', ev => {
     }
 });
 
-board.addEventListener('touchstart', handleTouchStart, false);
+document.getElementById('right').addEventListener("click", () => {
+    move('right');
+});
 
-function handleTouchStart(event) {
-    const touchX = event.touches[0].clientX;
-    const touchY = event.touches[0].clientY;
-    const headX = divs[snake[0]].getBoundingClientRect().left;
-    const headY = divs[snake[0]].getBoundingClientRect().top;
+document.getElementById('left').addEventListener("click", () => {
+    move('left');
+});
 
-    const deltaX = touchX - headX;
-    const deltaY = touchY - headY;
+document.getElementById('up').addEventListener("click", () => {
+    move('up');
+});
 
-    if (Math.abs(deltaX) > Math.abs(deltaY)) {
-        if (deltaX > 0) {
-            move('right');
-        } else {
-            move('left');
-        }
-    } else {
-        if (deltaY > 0) {
-            move('down');
-        } else {
-            move('up');
-        }
-    }
-}
+document.getElementById('down').addEventListener("click", () => {
+    move('down');
+});
 
+document.getElementById('stop').addEventListener("click", () => {
+    clearInterval(myInterval);
+});

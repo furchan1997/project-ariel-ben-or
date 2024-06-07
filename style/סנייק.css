@@ -105,25 +105,67 @@ h2 {
     background-color: #84c0c4;
 }
 
-.arrow {
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
+#contolers {
+    display: none;
 }
 
-.arrow.up {
-    border-bottom: 50px solid black;
+#movements {
+    width: 200px;
+    height: 100px;
+    margin: auto;
+    position: relative;
+    padding: 30px;
 }
 
-.arrow.down {
-    border-top: 50px solid black;
+#right {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.arrow.left {
-    border-right: 50px solid black;
+#left {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.arrow.right {
-    border-left: 50px solid black;
+#up {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#down {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+button {
+    /* position: absolute; */
+    /* width: 20px; */
+    height: 50px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(to right, #001315, #04c3e5);
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 1200px) {
+    #contolers {
+        display: block;
+    }
 }
