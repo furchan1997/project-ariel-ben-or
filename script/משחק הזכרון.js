@@ -1,9 +1,9 @@
 const board = document.querySelector("#board");
-const arryImges = ['/images/משחק זכרון/angry.png', '/images/משחק זכרון/Asks.png', '/images/משחק זכרון/broke off.png',
-    '/images/משחק זכרון/childish.png', '/images/משחק זכרון/elf.png', '/images/משחק זכרון/listening.png', '/images/משחק זכרון/oops.png',
-    '/images/משחק זכרון/salutes.png', '/images/משחק זכרון/very angry.png', '/images/משחק זכרון/thinking.png', '/images/משחק זכרון/angry.png', '/images/משחק זכרון/Asks.png', '/images/משחק זכרון/broke off.png',
-    '/images/משחק זכרון/childish.png', '/images/משחק זכרון/elf.png', '/images/משחק זכרון/listening.png', '/images/משחק זכרון/oops.png',
-    '/images/משחק זכרון/salutes.png', '/images/משחק זכרון/very angry.png', '/images/משחק זכרון/thinking.png'
+const arryImges = ['../images/משחק זכרון/angry.png', '../images/משחק זכרון/Asks.png', '../images/משחק זכרון/broke off.png',
+    '../images/משחק זכרון/childish.png', '../images/משחק זכרון/elf.png', '../images/משחק זכרון/listening.png', '../images/משחק זכרון/oops.png',
+    '../images/משחק זכרון/salutes.png', '../images/משחק זכרון/very angry.png', '../images/משחק זכרון/thinking.png', '../images/משחק זכרון/angry.png', '../images/משחק זכרון/Asks.png', '../images/משחק זכרון/broke off.png',
+    '../images/משחק זכרון/childish.png', '../images/משחק זכרון/elf.png', '../images/משחק זכרון/listening.png', '../images/משחק זכרון/oops.png',
+    '../images/משחק זכרון/salutes.png', '../images/משחק זכרון/very angry.png', '../images/משחק זכרון/thinking.png'
 ];
 const width = window.screen.width < 640 ? 110 : 100;
 const height = 100;
