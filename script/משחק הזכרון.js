@@ -51,14 +51,14 @@ function updateBoard() {
                     isClicked = true;
                     firstCard = photo;
                     firstCard.src = imgSrc;
-                    sound("/sound/click.mp3");
+                    sound("../sound/click.mp3");
 
                     checkRes("בחר את הקלף הנכון", counter, "green", "yellow");
                 } else if (!secondCard) {
                     secondCard = photo;
                     secondCard.src = imgSrc;
                     isChecking = true;
-                    sound("/sound/click.mp3");
+                    sound("../sound/click.mp3");
                     setTimeout(() => {
                         if (firstCard.src === secondCard.src) {
                             checkRes("כל הכבוד, המשך הלאה", ++counter, "green", "yellow");

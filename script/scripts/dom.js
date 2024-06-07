@@ -51,7 +51,7 @@ const createCard = (country) => {
         heartIcon.classList.toggle('text-secondary');
         savaHart(country.name.common, heartIcon.classList.contains('text-danger'));
         const clickSound = document.createElement('audio');
-        clickSound.src = '/sound/click.mp3';
+        clickSound.src = '../sound/click.mp3';
         clickSound.play();
     });
 
