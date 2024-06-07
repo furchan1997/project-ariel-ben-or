@@ -1,8 +1,13 @@
 const board = document.querySelector("#board");
-const arryImges = ['אננס.jpg', 'בצל.jpg', 'חסה.jpg', 'מלפפון.jpg', 'מנגו.jpg', 'עגבניה.jpg', 'פלפל אדום מתוק.jpg', 'פלפל ירוק חריף.jpg', 'צנון.jpg', 'שום.jpg', 'אננס.jpg', 'בצל.jpg', 'חסה.jpg', 'מלפפון.jpg', 'מנגו.jpg', 'עגבניה.jpg', 'פלפל אדום מתוק.jpg', 'פלפל ירוק חריף.jpg', 'צנון.jpg', 'שום.jpg'];
+const arryImges = ['/images/משחק זכרון/angry.png', '/images/משחק זכרון/Asks.png', '/images/משחק זכרון/broke off.png',
+    '/images/משחק זכרון/childish.png', '/images/משחק זכרון/elf.png', '/images/משחק זכרון/listening.png', '/images/משחק זכרון/oops.png',
+    '/images/משחק זכרון/salutes.png', '/images/משחק זכרון/very angry.png', '/images/משחק זכרון/thinking.png', '/images/משחק זכרון/angry.png', '/images/משחק זכרון/Asks.png', '/images/משחק זכרון/broke off.png',
+    '/images/משחק זכרון/childish.png', '/images/משחק זכרון/elf.png', '/images/משחק זכרון/listening.png', '/images/משחק זכרון/oops.png',
+    '/images/משחק זכרון/salutes.png', '/images/משחק זכרון/very angry.png', '/images/משחק זכרון/thinking.png'
+];
 const width = window.screen.width < 640 ? 110 : 100;
 const height = 100;
-const hiddenSrc = 'defulet card.png';
+const hiddenSrc = '/images/משחק זכרון/regular.png';
 let firstCard, secondCard;
 let isChecking = false;
 let isClicked = false;
@@ -20,7 +25,7 @@ function updateBoard() {
         photo.classList.add("dizing");
         photo.src = hiddenSrc;
 
-        checkRes(`ברוכים הבאים למשחק הזכרון <br /> החוקים הם פשוטים: בלחיצה חד פעמית על כפתור הצג קלפים יהיו לכם כ-10 שניות להתסכל על מיקומי הקלפים, אחריי 10 שניות הקלפים יוסתרו ועליכם להתאים לכל קלף את הקלף הזהה לו <br /> שימו לב: אם מגיעים ל5 פסילות המשחק נגמר, בהצלחה ! <br`, counter, "green", "yellow")
+        checkRes(`ברוכים הבאים למשחק הזכרון <br /> החוקים הם פשוטים: בלחיצה חד פעמית על כפתור הצג קלפים יהיו לכם כ-30 שניות להתסכל על מיקומי הקלפים, אחריי 30 שניות הקלפים יוסתרו ועליכם להתאים לכל קלף את הקלף הזהה לו <br /> שימו לב: אם מגיעים ל-10 פסילות המשחק נגמר, בהצלחה ! <br`, counter, "green", "yellow")
 
         document.getElementById("showCards").addEventListener("click", () => {
             if (!isClicked) {
@@ -34,7 +39,7 @@ function updateBoard() {
                     isClicked = true;
                     isChecking = false;
                     checkRes("זמן הצפייה בקלפים נגמר ! בהצלחה", counter, "green", "yellow")
-                }, 10000)
+                }, 1000 * 30)
             }
 
         });
@@ -74,9 +79,9 @@ function updateBoard() {
                             secondCard.src = hiddenSrc;
                             checkRes("נסו שוב", counter, "red", "white");
                         }
-                        if (clickCount >= 5) {
+                        if (clickCount >= 10) {
                             isChecking = false;
-                            alert("טעית כ5 פעמים, המשחק מתחיל מחדש")
+                            alert("טעית כ-10 פעמים, המשחק מתחיל מחדש")
                             newGame();
                         }
 
