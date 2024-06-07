@@ -7,7 +7,7 @@ const arryImges = ['/images/משחק זכרון/angry.png', '/images/משחק ז
 ];
 const width = window.screen.width < 640 ? 110 : 100;
 const height = 100;
-const hiddenSrc = '/images/משחק זכרון/regular.png';
+const hiddenSrc = '../images/משחק זכרון/regular.png';
 let firstCard, secondCard;
 let isChecking = false;
 let isClicked = false;
