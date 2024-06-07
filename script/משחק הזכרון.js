@@ -51,14 +51,14 @@ function updateBoard() {
                     isClicked = true;
                     firstCard = photo;
                     firstCard.src = imgSrc;
-                    sound("click.mp3");
+                    sound("/sound/click.mp3");
 
                     checkRes("בחר את הקלף הנכון", counter, "green", "yellow");
                 } else if (!secondCard) {
                     secondCard = photo;
                     secondCard.src = imgSrc;
                     isChecking = true;
-                    sound("click.mp3");
+                    sound("/sound/click.mp3");
                     setTimeout(() => {
                         if (firstCard.src === secondCard.src) {
                             checkRes("כל הכבוד, המשך הלאה", ++counter, "green", "yellow");
@@ -67,7 +67,7 @@ function updateBoard() {
                                 board.innerHTML = "";
                                 res.classList.add("styleAftterWon");
                                 checkRes("כל הכבוד, סיימתם את המשחק !", counter, "blue", "white");
-                                sound("won.mp3");
+                                sound("/sound/won.mp3");
                                 arryImges.sort(() => Math.random() - 0.5);
                                 localStorage.setItem("recordOfCounter", recordOfCounter)
                                 loadRecords()
