@@ -109,7 +109,7 @@ function move(dir) {
         // score += 10;
         document.querySelector("#score").innerText = score;
         saveRecord()
-        sound("../sound/success.mp3");
+        sound("../sound/click.mp3");
 
     } else {
         snake.pop();
