@@ -154,13 +154,13 @@ function bottomIt() {
     save();
 }
 
-function rowsIt() {
-    page.style.display = "flex";
-    page.style.flexDirection = "row";
-    page.style.justifyContent = "center";
-    page.style.alignItems = "end";
-    save();
-}
+// function rowsIt() {
+//     page.style.display = "flex";
+//     page.style.flexDirection = "row";
+//     page.style.justifyContent = "center";
+//     page.style.alignItems = "end";
+//     save();
+// }
 
 function save() {
     const elements = [];

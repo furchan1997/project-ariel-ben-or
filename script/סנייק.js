@@ -22,12 +22,10 @@ function createBoard() {
         board.appendChild(div);
         divs.push(div);
     }
-
-    recordRes.innerHTML = `השיא שלך הינו: ${record} נקודות`
-
     color();
     setApple();
-    loadRecord()
+    loadRecord();
+    clearRecord();
 }
 
 function color() {
@@ -149,13 +147,12 @@ document.getElementById('difficulty').addEventListener('change', () => {
 });
 
 function gameOver() {
+    loadRecord();
     isGameOver = true;
     clearInterval(myInterval);
     sound("../sound/lose.mp3");
-    console.log(sound);
     document.querySelector("#newGame").style.display = "initial";
-    setTimeout(() => alert('game over'), 50);
-    recordRes.innerHTML = `השיא שלך הינו: ${record} נקודות`
+    setTimeout(() => alert('game over'), 500);
     difficulty.style.display = "block";
 
 
@@ -176,6 +173,9 @@ function sound(fileName) {
 }
 
 function newGame() {
+    // clearRecord();
+    loadRecord();
+    recordRes.innerHTML = `השיא שלך הינו: ${record} נקודות`
     snake.splice(0, snake.length);
     snake.push(9, 8, 7, 6, 5, 4, 3, 2, 1, 0);
     isGameOver = false;
@@ -198,9 +198,19 @@ function loadRecord() {
     record = localStorage.getItem('maxScoreOfGame');
     if (record) {
         maxScore = Number(record);
+
+    }
+    if (record === null || record === undefined) {
+        record = 0;
     }
     recordRes.innerHTML = `השיא שלך הינו: ${record} נקודות`
 
+}
+
+function clearRecord() {
+    localStorage.removeItem('maxScoreOfGame');
+    record = 0;
+    recordRes.innerHTML = `השיא שלך הינו: ${record} נקודות`
 }
 
 window.addEventListener('keydown', ev => {
