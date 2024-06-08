@@ -116,6 +116,8 @@ a[href*=קורות]:hover {
 
 .card p {
     font-size: 1rem;
+    display: block;
+    margin: auto;
 }
 
 .card {
@@ -359,7 +361,7 @@ img[alt *=ic] {
         font-size: 80%;
     }
 
-    a[href*=מעבר] {
+    a[href*=עמודי] {
         font-size: 80%;
         width: 40vw;
         height: 3rem;
