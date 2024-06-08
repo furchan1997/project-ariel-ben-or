@@ -110,6 +110,7 @@ function move(dir) {
         document.querySelector("#score").innerText = score;
         saveRecord()
         sound("../sound/snake_Pebble.ogg");
+
     } else {
         snake.pop();
     }
@@ -150,7 +151,7 @@ document.getElementById('difficulty').addEventListener('change', () => {
 function gameOver() {
     isGameOver = true;
     clearInterval(myInterval);
-    sound("../sound/Country_Blues.ogg");
+    sound("../sound/snake_lose.ogg");
     console.log(sound);
     document.querySelector("#newGame").style.display = "initial";
     setTimeout(() => alert('game over'), 50);
