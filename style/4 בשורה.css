@@ -1,0 +1,196 @@
+body {
+    background-image: url("/images/back-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    direction: rtl;
+}
+
+#newGameBtn {
+    display: block;
+    margin: auto;
+}
+
+#infoBtn {
+    display: block;
+    margin: 5px auto;
+}
+
+#newGameBtn:hover {
+    background-color: rgb(93, 116, 136);
+}
+
+.circle {
+    background-color: rgb(21, 56, 79);
+    /* כחול אלגנטי */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        0 6px 20px rgba(18, 13, 88, 0.19);
+    transition: all 0.3s ease;
+}
+
+.circle:hover {
+    box-shadow:
+        0 8px 16px rgba(0, 0, 0, 0.2),
+        0 12px 40px rgba(0, 0, 0, 0.19);
+    transform: scale(1.05);
+}
+
+.first-user {
+    background-color: rgb(178, 14, 14);
+    border-radius: 50%;
+}
+
+.second-user {
+    background-color: rgb(0, 215, 61);
+    border-radius: 50%;
+}
+
+#board {
+    width: 300px;
+    margin: 10px auto;
+    display: grid;
+}
+
+#controler-player {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: auto;
+}
+
+.Players-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+}
+
+/* אזור פרטי השחקו */
+.player {
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    border-radius: 25%;
+    background-color: rgb(178, 14, 14);
+    text-align: center;
+    box-shadow: 10px 10px 10px grey(255, 255, 255, 0.5);
+}
+
+.player:hover {
+    box-shadow:
+        0 8px 16px rgba(0, 0, 0, 0.2),
+        0 12px 40px rgba(0, 0, 0, 0.19),
+        0 0 20px rgba(255, 255, 255, 0.5),
+        inset 0 0 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+
+}
+
+.current-user {
+    box-shadow:
+        0 25px 35px rgba(0, 0, 0, 0.3),
+        0 10px 20px rgba(0, 0, 0, 0.4),
+        0 0 15px rgba(255, 255, 255, 0.8);
+    transform: translateY(-10px);
+}
+
+#green-one {
+    background-color: rgb(33, 169, 71);
+}
+
+input {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgba(20, 4, 21, 0.229);
+    /* display: none; */
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+button:hover {
+    background-color: rgb(178, 14, 14);
+    filter: brightness(1.2);
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+    transform: scale(1.1);
+
+}
+
+#btnFirstPlayer:hover {
+    background-color: rgb(0, 215, 61);
+}
+
+#name1,
+#name2 {
+    font-weight: bold;
+    color: black;
+}
+
+#msg {
+    width: 300px;
+    height: 100px;
+    margin: 30px auto;
+    border-radius: 20%;
+    background-color: rgba(254, 240, 240, 0.9);
+    color: rgb(178, 14, 14);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    box-shadow:
+        0 4px 8px rgba(113, 98, 98, 0.2),
+        0 6px 20px rgba(94, 37, 37, 0.19),
+        0 0 10px rgba(255, 255, 255, 0.5),
+        inset 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+#msg:hover {
+    box-shadow:
+        0 8px 16px rgba(0, 0, 0, 0.2),
+        0 12px 40px rgba(0, 0, 0, 0.19),
+        0 0 20px rgba(255, 255, 255, 0.5),
+        inset 0 0 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+@media screen and (max-width:1200px) {
+    body {
+        width: 93vw;
+        height: 100vh;
+    }
+
+    #controler-player {
+        width: 90vw;
+        margin-top: 70px;
+        /* margin: auto; */
+    }
+
+    .Players-details {
+        width: 50vw;
+    }
+
+    #msg {
+        margin-top: 200px;
+    }
+}
