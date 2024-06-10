@@ -11,7 +11,7 @@ const player1 = document.getElementById("inputFirstPlayer");
 const player2 = document.getElementById("inputSecondPlayer");
 const name1 = document.getElementById("name1");
 const name2 = document.getElementById("name2");
-const msg = document.getElementById("msg");
+const message = document.getElementById("msg");
 gameMode(firstUserCounter, secondUserCounter, "Welcome to 4 in a row game!");
 
 function creatBorad() {
@@ -24,6 +24,8 @@ function creatBorad() {
 
         // יצירת איוונט לכל אירוע לחיצה, פעם לשחקן ראשון ופעם לשחקן השני
         div.addEventListener('click', () => {
+
+
 
             // אם הדיב מכיל את אחד מהמחלקות אז הפונקציה נעצרת
             if (div.classList.contains('first-user') || div.classList.contains('second-user')) {
@@ -43,7 +45,9 @@ function creatBorad() {
                 div.classList.add('first-user');
                 document.querySelector(".red").classList.add("current-user");
                 document.querySelector(".green").classList.remove("current-user");
-                gameMode(firstUserCounter, secondUserCounter, `It's the turn of ${name1.innerHTML} right now`);
+                if (window.innerWidth > 640) {
+                    gameMode(firstUserCounter, secondUserCounter, `It's the turn of ${name1.innerHTML} right now`);
+                }
                 sound("../sound/click.mp3");
                 firstUser = false;
                 checkWinner();
@@ -53,7 +57,9 @@ function creatBorad() {
                 div.classList.add('second-user');
                 document.querySelector(".red").classList.remove("current-user");
                 document.querySelector(".green").classList.add("current-user");
-                gameMode(firstUserCounter, secondUserCounter, `It's the turn of ${name2.innerHTML} right now`);
+                if (window.innerWidth > 640) {
+                    gameMode(firstUserCounter, secondUserCounter, `It's the turn of ${name1.innerHTML} right now`);
+                }
                 sound("../sound/click.mp3");
                 firstUser = true;
                 checkWinner();
@@ -169,11 +175,18 @@ function newGame() {
     gameMode(firstUserCounter, secondUserCounter, "Welcome to 4 in a row game!");
 }
 
-function gameMode(firstUserCounter, secondUserCounter, msg) {
+function gameMode(firstUserCounter, secondUserCounter, message) {
     firstUserScore.innerHTML = firstUserCounter;
     secondUserScore.innerHTML = secondUserCounter;
-    document.getElementById("content-msg").innerHTML = msg;
+    if (window.innerWidth < 640) {
+        setTimeout(() => {
+            alert(message);
+        }, 500);
+    } else {
+        document.getElementById("content-msg").innerHTML = message;
+    }
 }
+
 
 function sound(fileName) {
     const audio = document.createElement("audio");
