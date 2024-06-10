@@ -14,6 +14,7 @@ let isClicked = false;
 let counter = 0;
 let recordOfCounter = 0;
 let clickCount = 0;
+let attempts = 0;
 const res = document.getElementById("res");
 const showRecord = document.getElementById("record");
 
@@ -30,7 +31,7 @@ function updateBoard() {
         document.getElementById("showCards").addEventListener("click", () => {
             if (!isClicked) {
 
-                checkRes("", counter, "green", "yellow")
+                res.style.display = "none";
                 photo.src = imgSrc;
                 isChecking = true;
 
@@ -38,6 +39,7 @@ function updateBoard() {
                     photo.src = hiddenSrc;
                     isClicked = true;
                     isChecking = false;
+                    res.style.display = "block";
                     checkRes("זמן הצפייה בקלפים נגמר ! בהצלחה", counter, "green", "yellow")
                 }, 1000 * 30)
             }
@@ -71,9 +73,9 @@ function updateBoard() {
                                 arryImges.sort(() => Math.random() - 0.5);
                                 localStorage.setItem("recordOfCounter", recordOfCounter)
                                 loadRecords()
-                                // newGame();
                             }
                         } else {
+                            attempts++;
                             clickCount++;
                             firstCard.src = hiddenSrc;
                             secondCard.src = hiddenSrc;
@@ -105,11 +107,12 @@ function newGame() {
     counter = 0;
     clickCount = 0
     isClicked = false;
+    attempts = 0;
     updateBoard();
 }
 
 function checkRes(msg, counter, color, bgcolor) {
-    res.innerHTML = `${msg} <br>Score: ${counter}`;
+    res.innerHTML = `${msg} <br>Score: ${counter} <br> מספר הניסיונות הן: ${attempts}/10`;
     res.style.color = color;
     res.style.backgroundColor = bgcolor;
 }
