@@ -2,7 +2,6 @@ body {
     background-image: url("../images/back-img.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    /* height: 100vh; */
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -176,14 +175,13 @@ button:hover {
 
 @media screen and (max-width:1200px) {
     body {
-        width: 93vw;
         height: 100vh;
     }
 
     #controler-player {
-        width: 90vw;
-        margin-top: 70px;
-        /* margin: auto; */
+        display: flex;
+        width: 100%;
+        margin: auto;
     }
 
     .Players-details {
