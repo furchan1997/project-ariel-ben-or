@@ -1,0 +1,29 @@
+nav {
+    #navbarNav {
+        direction: rtl;
+    }
+
+    #main-btn {
+        color: $mainColor;
+        font: normal normal bold 20px/37px Heebo;
+    }
+
+    .nav-a {
+        font: normal normal normal 18px/37px Heebo;
+        color: $text-color;
+    }
+
+}
+
+img[alt=אני] {
+    width: 50px;
+    border-radius: 100px;
+    height: 48px;
+}
+
+@media screen and (max-width:1200px) {
+
+    nav a h2 {
+        display: none;
+    }
+}

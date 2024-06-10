@@ -1,0 +1,170 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav #navbarNav {
+  direction: rtl;
+}
+nav #main-btn {
+  color: #1AE0EC;
+  font: normal normal bold 20px/37px Heebo;
+}
+nav .nav-a {
+  font: normal normal normal 18px/37px Heebo;
+  color: #3A3A3A;
+}
+
+img[alt=אני] {
+  width: 50px;
+  border-radius: 100px;
+  height: 48px;
+}
+
+@media screen and (max-width: 1200px) {
+  nav a h2 {
+    display: none;
+  }
+}
+header {
+  background-color: rgba(19, 232, 241, 0.3882352941);
+  margin-top: 50px;
+  width: 100vw;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  direction: rtl;
+  text-align: center;
+  padding: 50px;
+}
+header h2 {
+  font: normal normal 900 80px/118px Heebo;
+  color: #3A3A3A;
+  letter-spacing: 0px;
+  margin: auto;
+}
+header p {
+  text-align: center;
+  color: #3A3A3A;
+  font: normal normal medium 20px/30px Heebo;
+  letter-spacing: 0px;
+}
+
+#a-control {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 50vw;
+}
+#a-control a[href$=html] {
+  background-color: #1AE0EC;
+  border-radius: 25px;
+  font: normal normal bold 1.5rem Heebo;
+  letter-spacing: 0.3px;
+  color: #3A3A3A;
+  width: 50%;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+#a-control #download {
+  background-color: #1AE0EC;
+  border-radius: 25px;
+  font: normal normal bold 1.5rem Heebo;
+  letter-spacing: 0.3px;
+  color: #3A3A3A;
+  width: 50%;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+#a-control a[href$=html]:hover {
+  background-color: darkblue;
+  color: #1AE0EC;
+  text-decoration: none;
+}
+#a-control #download:hover {
+  background-color: darkblue;
+  color: #1AE0EC;
+  text-decoration: none;
+}
+
+#tools-logo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  header h2 {
+    font: normal normal 900 46px/67px Heebo;
+  }
+  #a-control {
+    width: 80vw;
+  }
+  #a-control a[href$=html] {
+    font-size: 80%;
+    width: 50%;
+  }
+  #a-control #download {
+    font-size: 80%;
+    width: 50%;
+  }
+  img[alt^=logo] {
+    width: 15vw;
+    height: auto;
+  }
+}
+@media screen and (max-width: 300px) {
+  #a-control a[href$=html] {
+    font-size: 70%;
+  }
+  #a-control #download {
+    font-size: 70%;
+  }
+}
+#main-img {
+  background-color: #EBFEFF;
+  min-height: 100vh;
+}
+#main-img img[alt=דף-נחיתה] {
+  width: 70vw;
+  height: 70vh;
+  margin: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media screen and (max-width: 1200px) {
+  #main-img {
+    min-height: 30vh;
+  }
+  #main-img img[alt=דף-נחיתה] {
+    height: 20vh;
+  }
+}
+footer {
+  background-color: #000;
+  max-height: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+footer p {
+  color: #1AE0EC;
+  margin-left: 1rem;
+  font: normal normal normal 16px/29px Heebo;
+  letter-spacing: 0.5px;
+}
+
+#border-b {
+  border-bottom: 5px solid #1AE0EC;
+}/*# sourceMappingURL=main.css.map */
