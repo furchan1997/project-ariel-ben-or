@@ -175,13 +175,14 @@ button:hover {
 
 @media screen and (max-width:1200px) {
     body {
+        /* width: 93vw; */
         height: 100vh;
     }
 
     #controler-player {
         display: flex;
         width: 100%;
-        margin: auto;
+        margin: 50px auto;
     }
 
     .Players-details {
@@ -189,6 +190,6 @@ button:hover {
     }
 
     #msg {
-        margin-top: 100px;
+        display: none;
     }
 }
