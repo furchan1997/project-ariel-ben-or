@@ -125,7 +125,7 @@ a[href*=קורות]:hover {
     flex-direction: column;
     justify-content: space-around;
     align-content: center;
-    width: 260px;
+    width: 240px;
     height: 300px;
     box-shadow: 15px 15px 15px gainsboro;
     text-align: center;
