@@ -208,6 +208,7 @@ function loadRecord() {
 
 function clearRecord() {
     localStorage.removeItem('maxScoreOfGame');
+    maxScore = 0;
     record = 0;
     recordRes.innerHTML = `השיא שלך הינו: ${record} נקודות`
 }
