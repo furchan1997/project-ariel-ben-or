@@ -46,7 +46,7 @@ function creatBorad() {
                 gameMode(firstUserCounter, secondUserCounter, `It's the turn of ${name1.innerHTML} right now`);
                 sound("../sound/click.mp3");
                 firstUser = false;
-                checkWinner()
+                checkWinner();
 
 
             } else {
@@ -56,7 +56,7 @@ function creatBorad() {
                 gameMode(firstUserCounter, secondUserCounter, `It's the turn of ${name2.innerHTML} right now`);
                 sound("../sound/click.mp3");
                 firstUser = true;
-                checkWinner()
+                checkWinner();
             }
         });
     }
@@ -93,14 +93,14 @@ function checkWinner() {
             if (firstUserWin) {
                 gameMode(firstUserCounter, secondUserCounter++, `${name2.innerHTML} is the winner`);
                 sound("../sound/won.mp3");
-                setTimeout(() => { reGame() }, 1000);
+                setTimeout(() => { reGame() }, 500);
                 saveGameMode();
                 return;
             }
             if (secondUserWin) {
                 gameMode(firstUserCounter++, secondUserCounter, `${name1.innerHTML} is the winner`);
                 sound("../sound/won.mp3");
-                setTimeout(() => { reGame() }, 1000);
+                setTimeout(() => { reGame() }, 500);
                 saveGameMode();
                 return;
             }
