@@ -95,7 +95,6 @@ document.querySelector("#save").addEventListener("click", () => {
     if (tasks.innerHTML.trim() === "") {
         deleteAllBtn.style.display = "none";
         divList.innerHTML = "אנא הוסף פריטים לרשימה";
-        // alert("צריך להוסיף פריטים לרשימה כדי שיהיה מה לשמור")
         divList.style.display = "block";
         divList.classList.remove("lists")
         divList.classList.add("msg-click")
