@@ -1,3 +1,4 @@
+// הצבת משתנים גלובליים שאני יעזר בהן לפיתוח המשחק
 const board = document.querySelector("#board");
 const width = 4;
 const height = 4;
@@ -12,6 +13,7 @@ const player2 = document.getElementById("inputSecondPlayer");
 const name1 = document.getElementById("name1");
 const name2 = document.getElementById("name2");
 const message = document.getElementById("msg");
+// הודעת מצב דיפולטיבית
 gameMode(firstUserCounter, secondUserCounter, "Welcome to 4 in a row game!");
 
 function creatBorad() {
@@ -36,6 +38,7 @@ function creatBorad() {
                 gameMode(firstUserCounter, secondUserCounter, "Please give players names in the input boxes to start the game")
                 return;
             }
+            // הפעלת המנגינה כאשר יש לחיצה ראשונית על ידיי אחד המשתמשים
             if (!hasPlayMusic) {
                 sound("../sound/tension tune.mp3");
                 hasPlayMusic = true;
@@ -66,6 +69,7 @@ function creatBorad() {
             }
         });
     }
+    // קריאה לפונקציה של התצוגה הויזואלית של השמירה שהגדרתי
     loadGameMode();
 }
 
@@ -94,8 +98,8 @@ function checkWinner() {
             // הגדרת משתנים של השחקנים שניצחו יחד עם לולאה שרצה על כל הדיבים שקיבלו את המחלקות המצויינות
             let firstUserWin = op.every(index => divs[index].classList.contains("first-user"));
             let secondUserWin = op.every(index => divs[index].classList.contains("second-user"));
-            // הצבת תנאי שאם אחד מהמשתנים קיים ויש בתוכו את האופציות לניצחון אז יוצג הודעת ניצחון + ניקוד
 
+            // הצבת תנאי שאם אחד מהמשתנים קיים ויש בתוכו את האופציות לניצחון אז יוצג הודעת ניצחון + ניקוד + הפעלת המשחק אוטומטית לאחר חצי שנייה
             if (firstUserWin) {
                 gameMode(firstUserCounter, secondUserCounter++, `${name2.innerHTML} is the winner`);
                 sound("../sound/won.mp3");
@@ -113,11 +117,15 @@ function checkWinner() {
         }
     }
     let isDraw = true; // משתנה לבדיקת תיקו
+
+    // פתרון מצב של תיקו
+    //  עשיתי לולאה חדשה שרצה על כל הדיבים ואז תנאי שבודק שאם הדיבים לא מכילים את המחלקות הנתונות אז שוללים את מצב התיקו 
     for (const div of divs) {
         if (!div.classList.contains("first-user") && !div.classList.contains("second-user")) {
             isDraw = false;
         }
     }
+    // ואם זה אחרת כלומר שיש תיקו אז יקרו הפעולות הבאות
     if (isDraw) {
         gameMode(firstUserCounter, secondUserCounter, "It's a draw");
         setTimeout(() => { reGame() }, 1000);
@@ -125,6 +133,8 @@ function checkWinner() {
         return;
     }
 }
+
+// פונקציה שמפעילה את המשחק מחדש 
 function reGame() {
     firstUser = true;
     board.innerHTML = "";
@@ -132,11 +142,15 @@ function reGame() {
     creatBorad();
 }
 
+// פונקציה שמטפלת בעניין פרטי השחקנים 
 function playersDetails() {
+    // טיפול בשדה קלט ריק או לא תקין
     if (player1.value == "" || player2.value == "") {
         alert("יש להכניס שם לכל שחקן");
         return;
     }
+
+    // השמה של השמות שהוזנו בתיבת הקלט + תצוגת המשחק לאחר אישור
     name1.innerHTML = player1.value;
     document.getElementById("btnFirstPlayer").style.display = "none";
     player1.style.display = "none";
@@ -146,12 +160,16 @@ function playersDetails() {
     player2.style.display = "none";
 
     gameMode(firstUserCounter, secondUserCounter, "lets start the game !");
+    // שמירת השמות
     saveGameMode();
 }
 
+// קריאה לפונקציה playersDetails()
 document.getElementById("btnFirstPlayer").addEventListener("click", playersDetails);
 document.getElementById("btnSecondPlayer").addEventListener("click", playersDetails);
 
+// פונקציה שמטפלת כאשר רוצים להתחיל משחק חדש
+// מחיקת השמירה + תצוגה ויזואלית חדשה + איפוס ניקוד + הודעת מצב
 function newGame() {
     localStorage.removeItem("firstUserCounter");
     localStorage.removeItem("secondUserCounter");
@@ -175,6 +193,7 @@ function newGame() {
     gameMode(firstUserCounter, secondUserCounter, "Welcome to 4 in a row game!");
 }
 
+// פונקציה אשר מטפלת בעיניין הודעות מצב משחק בכל פעולה שאחד המשתמשים עושה בזמן אמת + שינוי במצב מובייל
 function gameMode(firstUserCounter, secondUserCounter, message) {
     firstUserScore.innerHTML = firstUserCounter;
     secondUserScore.innerHTML = secondUserCounter;
@@ -187,13 +206,15 @@ function gameMode(firstUserCounter, secondUserCounter, message) {
     }
 }
 
-
+// פונקציה שמטפלת בעניין הסאונד והמניגות באירועים שונים במשחק
+// הפונקציה מקבלת פרמטר אשר נותן אפשרות לסאונד שונה באירועים שונים במשחק
 function sound(fileName) {
     const audio = document.createElement("audio");
     audio.src = fileName;
     audio.play();
 }
 
+// פונקציה שמטפלת בעניין שמירת הנתונים, שמות השחקנים + הניקוד שלהם
 function saveGameMode() {
     localStorage.setItem("firstUserCounter", firstUserCounter);
     localStorage.setItem("secondUserCounter", secondUserCounter);
@@ -201,6 +222,7 @@ function saveGameMode() {
     localStorage.setItem("name2", name2.innerHTML);
 }
 
+// פונקציה שמטפלת בעניין הטעינה של הנתונים, שמות השחקנים + הניקוד שלהם
 function loadGameMode() {
     const firstPlayer = localStorage.getItem("firstUserCounter");
     const secondPlayer = localStorage.getItem("secondUserCounter");
@@ -215,9 +237,13 @@ function loadGameMode() {
         secondUserCounter = parseInt(secondPlayer);
         secondUserScore.innerHTML = secondPlayer;
     }
+
+    // אם יש לי מצב שבו יש שמירת ניקוד לשחקנים והיה טעינה חדשה של המשחק יהיה לי הודעה של המשך המשחק ולא של ברוכים הבאים
     if (secondPlayer && firstPlayer) {
         gameMode(firstUserCounter, secondUserCounter, "Continue the game !");
     }
+
+    // אם יש לי מצב שבו יש לי שמות שמורים והדף נטען מחדש אז לא יוצג לי תיבת קלט של השמות + הכפתור
     if (storedName1) {
         name1.innerHTML = storedName1;
         if (storedName1.length > 0) {
@@ -234,6 +260,7 @@ function loadGameMode() {
     }
 }
 
+// פונקציה שמסבירה ומפרטת את חוקיי המשחק בהתראה בלחיצת כפתור
 function roolsGame() {
     alert("כל משתתף משחיל בתורו דסקית אחת לתוך הלוח. על השחקן לנסות ליצור רצף של ארבע דסקיות בשורה, בטור או באלכסון, ובמקביל לנסות לתחום את היריב ולמנוע ממנו ליצור רצף עם הדסקיות שלו. המנצח: השחקן הראשון שהצליח ליצור רצף של 4 דסקיות בצבע זהה.");
 }
