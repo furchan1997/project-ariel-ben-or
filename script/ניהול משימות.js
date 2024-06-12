@@ -71,7 +71,7 @@ function saveTasks() {
     localStorage.setItem("tasks", JSON.stringify(tasksArray));
 }
 
-// פונקציה אשר מטפלת בטעינת המשימות שנשמרו באחסון המקומי
+// פונקציה להצגת הערך של הנתונים על ה-DOM
 function loadTasks() {
     const savedTasks = JSON.parse(localStorage.getItem("tasks"));
     // הוספת האלמנטים והפעולות לשמירה באחסון המקומי

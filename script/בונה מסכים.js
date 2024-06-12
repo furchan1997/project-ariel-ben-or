@@ -218,7 +218,7 @@ function save() {
     localStorage.setItem('pageStyle', JSON.stringify(pageStyle));
 }
 
-// פונקציה אשר מטפלת בהצגת האלנטים והעיצובים שנשמרו על הדף כאשר טוענים את האתר מחדש
+// פונקציה להצגת הערך של הנתונים על ה-DOM
 function load() {
     // שליפת האלמנטים מהאחסון המקומי
     const elements = JSON.parse(localStorage.getItem('elements'));

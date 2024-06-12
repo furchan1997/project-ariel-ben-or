@@ -153,7 +153,7 @@ function checkRes(msg, counter, color, bgcolor) {
     res.style.backgroundColor = bgcolor;
 }
 
-// פונקציה אשר מטפלת בהצגת השיא השמור לאחר טעינה חדשה של המשחק
+// פונקציה להצגת הערך של הנתונים על ה-DOM
 function loadRecords() {
     recordOfCounter = localStorage.getItem("recordOfCounter");
     // טיפול במצב שהמשתנה ללא ערך

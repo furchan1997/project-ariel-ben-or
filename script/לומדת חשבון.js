@@ -156,7 +156,7 @@ function saveTableData() {
     localStorage.setItem('tableData', tableData);
 }
 
-// טוען את הנתונים השמורים כאשר הדף נטען
+// פונקציה להצגת הערך של הנתונים על ה-DOM
 function loadTableData() {
     const savedTableData = localStorage.getItem('tableData');
     if (savedTableData) {

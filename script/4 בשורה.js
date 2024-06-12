@@ -222,7 +222,7 @@ function saveGameMode() {
     localStorage.setItem("name2", name2.innerHTML);
 }
 
-// פונקציה שמטפלת בעניין הטעינה של הנתונים, שמות השחקנים + הניקוד שלהם
+// פונקציה להצגת הערך של הנתונים על ה-DOM
 function loadGameMode() {
     const firstPlayer = localStorage.getItem("firstUserCounter");
     const secondPlayer = localStorage.getItem("secondUserCounter");
