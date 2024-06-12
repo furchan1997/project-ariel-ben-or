@@ -1,8 +1,10 @@
 import { countries, reset, search as goSearch } from './countries.js';
 
+// השמה של שדה תיבת הקלט של חיפוש המדינה והמזהה שאחראי על תצוגת הקלפים למשתנים גלובליים
 const search = document.getElementById('search');
 const cards = document.getElementById('cards');
 
+// הוספת אירוע על גבי הקלט להצגת המדינות וטיפול במצב של שדה ריק
 search.addEventListener('input', (e) => {
     const word = e.target.value;
     cards.innerHTML = '';
@@ -15,6 +17,8 @@ search.addEventListener('input', (e) => {
     createAllCards();
 });
 
+// מקבלת אובייקט מדינה ויוצרת כרטיסיה לפי הנתונים שנמצאים באובייקט המדינה
+// הכרטיסיה כוללת תמונה, כותרת, טקסט ואייקון להוספת למועדפים (לב)
 const createCard = (country) => {
     const cardDiv = document.createElement('div');
     cardDiv.className = 'card shadow rounded m-2 col-md-3 col-sm-10';
@@ -41,11 +45,14 @@ const createCard = (country) => {
     heartIcon.className = 'fa fa-heart';
 
     if (isHartsPressed(country.name.common)) {
+        // אם המדינה נמצאת במועדפים
         heartIcon.classList.add('text-danger')
+        // אם המדינה לא נמצאת במועדפים 
     } else {
         heartIcon.classList.add('text-secondary')
     };
 
+    // הוספת אירועי לחיצה להוספת מדינה למועדפים והסרתה
     heartIcon.addEventListener('click', () => {
         heartIcon.classList.toggle('text-danger');
         heartIcon.classList.toggle('text-secondary');
@@ -68,18 +75,19 @@ const createCard = (country) => {
     cards.appendChild(cardDiv);
 }
 
+// מוציאים את הפונקציה כדי להשתמש בה מקובץ חיצוני.
 const createAllCards = () => {
     countries.forEach((country) => {
         createCard(country);
     });
 }
-
+// משמרת את המדינה ומצבה בלוקל סטוראג
 function savaHart(countryName, isPressed) {
     let harts = JSON.parse(localStorage.getItem('harts')) || {};
     harts[countryName] = isPressed;
     localStorage.setItem('harts', JSON.stringify(harts));
 }
-
+// בודקת האם המדינה נמצאת במועדפים
 function isHartsPressed(countryName) {
     let hearts = JSON.parse(localStorage.getItem('harts')) || {};
     return hearts[countryName] || false;
