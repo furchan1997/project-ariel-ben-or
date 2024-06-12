@@ -3,7 +3,6 @@ const ex = document.getElementById("ex");
 const tbody = document.querySelector("tbody");
 const answer = document.querySelector("#answer");
 const checkResButton = document.getElementById('checkRes');
-// const optionsDif = ["easy", "medium", "hard"];
 const difficulty = document.querySelector("#difficulty");
 const operators = document.querySelector("#operators");
 const res = document.getElementById("res");
@@ -11,7 +10,6 @@ let num1, num2, correctAnswer;
 let cumulativeScore = parseInt(localStorage.getItem('cumulativeScore')) || 0;
 let score = 0;
 let gameRulesVisible = false;
-
 
 // פונקצייה שנועדה להפעיל את האפשרוית לבחירת האופרטורים ודרגות הקושי
 function updateProblem() {

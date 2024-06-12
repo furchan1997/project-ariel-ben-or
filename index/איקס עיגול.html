@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/איקס עיגול.css">
+    <script src="../script/איקס עיגול.js" defer></script>
+    <title>איקס עיגול</title>
+</head>
+
+<body>
+    <h1>איקס עיגול</h1>
+
+    <div id="board">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div style="text-align: center">
+        <button onclick="newGame()">משחק חדש</button>
+        <button onclick="clearscore()">איפוס הניקוד</button>
+    </div>
+
+    <div id="players">
+        <div class="currentTurn">
+            <h2>X</h2>
+            <p>ניקוד: <span id="x_score"></span></p>
+        </div>
+        <div>
+            <h2>O</h2>
+            <p>ניקוד: <span id="o_score"></span></p>
+        </div>
+    </div>
+</body>
+
+</html>

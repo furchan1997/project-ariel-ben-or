@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600;700;900&display=swap');
+
+body {
+    direction: rtl;
+    font-family: 'Rubik', sans-serif;
+    background-color: #00363c;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin: 16px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 300px;
+    height: 300px;
+    gap: 5px;
+    margin: 30px auto;
+}
+
+#board>div {
+    background-color: white;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+#players {
+    display: flex;
+    justify-content: space-between;
+}
+
+#players>div {
+    text-align: center;
+    color: white;
+    border-radius: 50%;
+    background: #ffffff2b;
+    display: flex;
+    width: 160px;
+    height: 160px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#players h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+#players>div.currentTurn {
+    border: 3px solid;
+}
+
+#board>div.win {
+    background-color: coral;
+}
