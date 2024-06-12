@@ -214,7 +214,7 @@ function sound(fileName) {
     audio.play();
 }
 
-// פונקציה שמטפלת בעניין שמירת הנתונים, שמות השחקנים + הניקוד שלהם
+// פונקציה לשמירת הערך של הנתונים 
 function saveGameMode() {
     localStorage.setItem("firstUserCounter", firstUserCounter);
     localStorage.setItem("secondUserCounter", secondUserCounter);

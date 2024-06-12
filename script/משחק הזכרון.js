@@ -97,7 +97,7 @@ function updateBoard() {
                                 //סידור מחדש של הקלפים על הלוח על ידיי ערבוב אקראי של האיברים במערך
                                 arryImges.sort(() => Math.random() - 0.5);
 
-                                // שמירת הניקוד במצב של שיא
+                                // פונקציה לשמירת הערך של הנתונים 
                                 localStorage.setItem("recordOfCounter", recordOfCounter)
                                 loadRecords()
                             }

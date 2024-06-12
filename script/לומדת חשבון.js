@@ -150,7 +150,7 @@ function createTable() {
     saveTableData();
 }
 
-// יצירת שמירה לשינויים בטבלה
+// פונקציה לשמירת הערך של הנתונים 
 function saveTableData() {
     const tableData = tbody.innerHTML;
     localStorage.setItem('tableData', tableData);
