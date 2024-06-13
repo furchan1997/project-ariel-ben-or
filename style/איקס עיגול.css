@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600;700;900&display=swap');
 
 body {
-    direction: rtl;
-    font-family: 'Rubik', sans-serif;
-    background-color: #00363c;
+    background: linear-gradient(190deg, #bf0609, #a15e5e, #bf0609, #a15e5e);
 }
 
 h1 {
@@ -60,4 +58,22 @@ h1 {
 
 #board>div.win {
     background-color: coral;
+}
+
+#msg {
+    width: 200px;
+    height: 100px;
+    background-color: white;
+    border-radius: 10%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -20px 5px 15px rgba(0, 0, 0, 0.3), 5px -5px 15px rgba(12, 129, 33, 0.3);
+    transition: box-shadow 0.1s ease-out, transform 1.5s ease-in-out;
+}
+
+#msg:hover {
+    transform: translateY(-10px);
 }
