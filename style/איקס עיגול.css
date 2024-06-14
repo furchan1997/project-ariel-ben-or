@@ -36,14 +36,17 @@ h1 {
 }
 
 #players {
+    width: 90%;
     display: flex;
     justify-content: space-between;
+    /* align-items: center; */
+    margin: 0 auto;
 }
 
 #players>div {
     text-align: center;
     color: white;
-    border-radius: 50%;
+    border-radius: 80px;
     background: #ffffff2b;
     display: flex;
     width: 160px;
@@ -112,12 +115,17 @@ button:hover {
 
 @media screen and (min-width: 200px) and (max-width:600px) {
 
-
     #contauner {
         margin-top: 10%;
     }
 
+    #players>div {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+    }
+
     #msg {
-        margin-top: 40%;
+        display: none;
     }
 }
