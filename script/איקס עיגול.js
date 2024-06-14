@@ -1,4 +1,5 @@
 const divs = document.querySelectorAll("#board>div");
+const msg = document.getElementById("msg");
 let isX = true;
 let isGameOver = false;
 
@@ -50,8 +51,10 @@ function showTurn() {
     // שם את הקלאס בהתאם לתור השחקן
     if (isX) {
         document.querySelector("#players>div:first-child").classList.add('currentTurn');
+        msg.innerHTML = "is X turn";
     } else {
         document.querySelector("#players>div:last-child").classList.add('currentTurn');
+        msg.innerHTML = "is O turn";
     }
 }
 
@@ -85,23 +88,34 @@ function checkWinner() {
     }
 
     if (!isGameOver && [...divs].every(x => x.innerText)) {
-        setTimeout(() => alert("אין מנצח"), 50);
+        timeOut("It's a draw and there is no winner");
         isGameOver = true;
+        setTimeout(() => {
+            newGame();
+        }, 1000);
+
     }
 }
 
 function winner(op, win) {
-    setTimeout(() => alert(win + " is winner!"), 50);
+    // מציג את הודעת הניצחון
+    timeOut(`${win} is the winner`);
 
+    // מדגיש את המשבצות המנצחות
     op.forEach(x => divs[x].classList.add('win'));
 
     isGameOver = true;
 
+    // שמירת הניקוד ב-localStorage
     localStorage.x = scores.x;
     localStorage.o = scores.o;
 
     // כשיש ניצחון, מאפשרים לשחקן המנצח להתחיל
     isX = !isX;
+    setTimeout(() => {
+        newGame();
+        timeOut("continue")
+    }, 1000 * 3);
 }
 
 function newGame() {
@@ -113,14 +127,26 @@ function newGame() {
         div.classList.remove('win');
     });
 
-    isGameOver = false;
-    showTurn();
+    if (isGameOver = false) {
+        showTurn();
+    } else {
+        timeOut();
+    }
+
 }
 
 function clearscore() {
-
-    localStorage.x = 0;
-    localStorage.o = 0;
+    localStorage.removeItem("x");
+    localStorage.removeItem("o");
+    scores.x = 0;
+    scores.o = 0;
     document.querySelector("#x_score").innerText = 0;
     document.querySelector("#o_score").innerText = 0;
+}
+
+document.getElementById("clearscore").addEventListener("click", clearscore);
+function timeOut(msgText = "Welcome to TIC Tac Toe") {
+    setTimeout(() => {
+        msg.innerText = msgText;
+    }, 100);
 }
