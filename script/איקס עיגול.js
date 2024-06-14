@@ -2,6 +2,7 @@ const divs = document.querySelectorAll("#board>div");
 const msg = document.getElementById("msg");
 let isX = true;
 let isGameOver = false;
+isAlert = false;
 
 const scores = {
     x: localStorage.x ? Number(localStorage.x) : 0,
@@ -112,10 +113,21 @@ function winner(op, win) {
 
     // כשיש ניצחון, מאפשרים לשחקן המנצח להתחיל
     isX = !isX;
-    setTimeout(() => {
-        newGame();
-        timeOut("continue")
-    }, 1000 * 3);
+    if (window.innerWidth >= 640) {
+        setTimeout(() => {
+            newGame();
+            timeOut("continue")
+        }, 1000 * 3);
+    } else {
+        divs.forEach(div => {
+            div.innerText = '';
+            if (div.innerText.length < 0) {
+                return;
+            }
+            div.classList.remove('win');
+        });
+        isGameOver = false;
+    }
 }
 
 function newGame() {
@@ -144,9 +156,16 @@ function clearscore() {
     document.querySelector("#o_score").innerText = 0;
 }
 
-document.getElementById("clearscore").addEventListener("click", clearscore);
 function timeOut(msgText = "Welcome to TIC Tac Toe") {
-    setTimeout(() => {
-        msg.innerText = msgText;
-    }, 100);
+    if (window.innerWidth >= 640) {
+        setTimeout(() => {
+            msg.innerText = msgText;
+        }, 100);
+
+    } else {
+        msg.style.display = "none";
+        setTimeout(() => {
+            alert(msgText);
+        }, 50);
+    }
 }
