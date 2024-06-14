@@ -61,7 +61,7 @@ h1 {
 }
 
 #msg {
-    width: 200px;
+    width: 220px;
     height: 100px;
     background-color: white;
     border-radius: 10%;
@@ -86,10 +86,11 @@ button {
     font-weight: bold;
     background-color: white;
     border: 1px;
-    border-radius: 10%;
+    border-radius: 30%;
     overflow: hidden;
     box-shadow: -20px 5px 15px rgba(0, 0, 0, 0.3), 5px -5px 15px rgba(12, 129, 33, 0.3);
     transition: box-shadow 0.1s ease-out, transform 1.5s ease-in-out;
+    margin: 8px;
 }
 
 button:hover {
