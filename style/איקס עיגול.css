@@ -39,7 +39,6 @@ h1 {
     width: 90%;
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     margin: 0 auto;
 }
 
@@ -125,6 +124,9 @@ button:hover {
         border-radius: 50px;
         margin-top: 10px;
     }
+}
+
+@media screen and (max-width:600px) {
 
     #msg {
         display: none;

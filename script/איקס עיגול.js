@@ -1,9 +1,11 @@
+// הצבת משתנים גלובליים
 const divs = document.querySelectorAll("#board>div");
 const msg = document.getElementById("msg");
 let isX = true;
 let isGameOver = false;
 isAlert = false;
 
+// השמת הניקוד לאחסון המקומי
 const scores = {
     x: localStorage.x ? Number(localStorage.x) : 0,
     o: localStorage.o ? Number(localStorage.o) : 0,
@@ -88,6 +90,7 @@ function checkWinner() {
         }
     }
 
+    // במצב של תיקו
     if (!isGameOver && [...divs].every(x => x.innerText)) {
         timeOut("It's a draw and there is no winner");
         isGameOver = true;
@@ -98,6 +101,7 @@ function checkWinner() {
     }
 }
 
+// פונקציה המטפלת במצב של נצחון 
 function winner(op, win) {
     // מציג את הודעת הניצחון
     timeOut(`${win} is the winner`);
@@ -130,6 +134,7 @@ function winner(op, win) {
     }
 }
 
+// פונקציה המטפלת בעניין של משחק חדש
 function newGame() {
     divs.forEach(div => {
         div.innerText = '';
@@ -144,9 +149,9 @@ function newGame() {
     } else {
         timeOut();
     }
-
 }
 
+// ניקוי הניקוד השמור שהצטבר
 function clearscore() {
     localStorage.removeItem("x");
     localStorage.removeItem("o");
@@ -156,6 +161,7 @@ function clearscore() {
     document.querySelector("#o_score").innerText = 0;
 }
 
+// פונקציה המטפלת בעניין הודעת מצב למשתמשים
 function timeOut(msgText = "Welcome to TIC Tac Toe") {
     if (window.innerWidth >= 640) {
         setTimeout(() => {

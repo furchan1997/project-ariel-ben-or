@@ -120,7 +120,6 @@ input {
     height: 30px;
     border-radius: 5px;
     border: 1px solid rgba(20, 4, 21, 0.229);
-    /* display: none; */
 }
 
 button {
@@ -181,7 +180,6 @@ button:hover {
 
 @media screen and (max-width:1200px) {
     body {
-        /* width: 93vw; */
         height: 100vh;
     }
 
