@@ -110,7 +110,6 @@ button:hover {
     #board {
         width: 100%;
         text-align: center;
-        /* margin: 0 auto; */
     }
 
     #res {
@@ -123,5 +122,18 @@ button:hover {
         font-weight: 600;
         text-align: center;
         display: block;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #board {
+        width: 30%;
+        text-align: center;
+    }
+
+    #board>img {
+        width: 150px !important;
+        height: 150px !important;
+        text-align: center;
     }
 }

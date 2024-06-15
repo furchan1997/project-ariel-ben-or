@@ -153,9 +153,6 @@ button:hover {
     }
 
     #setting>* {
-        /* display: none; */
-        /* padding-top: 10px; */
-        /* font-size: 20px; */
         height: 50px;
     }
 }
