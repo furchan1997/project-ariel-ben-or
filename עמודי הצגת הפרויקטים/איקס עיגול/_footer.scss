@@ -1,0 +1,19 @@
+footer {
+    background-color: #000;
+    max-height: 30px;
+    display: flex;
+    justify-content: space-between;
+
+
+    p {
+        color: $mainColor;
+        margin-left: 1rem;
+        font: normal normal normal 16px/29px Heebo;
+        letter-spacing: 0.5px;
+    }
+
+}
+
+#border-b {
+    border-bottom: 5px solid $mainColor;
+}
