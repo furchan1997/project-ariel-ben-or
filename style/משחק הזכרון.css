@@ -125,15 +125,9 @@ button:hover {
     }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1800px) {
     #board {
         width: 30%;
-        text-align: center;
-    }
-
-    #board>img {
-        width: 150px !important;
-        height: 150px !important;
         text-align: center;
     }
 }
