@@ -73,7 +73,7 @@ img[alt="אני-שוב"] {
   border-radius: 145px;
 }
 
-a[href*="resume"] {
+a[href*="Resume"] {
   background-color: #1ae0ec;
   border-radius: 25px;
   font: normal normal bold 20px/30px Heebo;
@@ -86,7 +86,7 @@ a[href*="resume"] {
   justify-content: center;
 }
 
-a[href*="resume"]:hover {
+a[href*="Resume"]:hover {
   background-color: darkblue;
   color: #1ae0ec;
   text-decoration: none;
