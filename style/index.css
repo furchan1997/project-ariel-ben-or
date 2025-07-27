@@ -208,8 +208,30 @@ a[href*="cards-app"] {
   justify-content: center;
   margin-bottom: 3rem;
 }
+a[href*="edenque"] {
+  text-align: right;
+  font: normal normal medium 1rem/26px Heebo;
+  font-weight: bold;
+  letter-spacing: 0px;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  border-radius: 25px;
+  width: 70%;
+  height: 2rem;
+  margin: auto;
+  color: #3a3a3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
 
 a[href*="cards-app"]:hover {
+  background: linear-gradient(to right, #00f2fe, #4facfe);
+  transform: scale(1.05);
+  color: white;
+  text-decoration: none;
+}
+a[href*="edenque"]:hover {
   background: linear-gradient(to right, #00f2fe, #4facfe);
   transform: scale(1.05);
   color: white;
